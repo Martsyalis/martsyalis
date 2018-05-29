@@ -1,16 +1,9 @@
-import React, { PureComponent } from "react";
-import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
+import React, { PureComponent } from 'react';
+import { withRouter } from 'react-router-dom';
+import styles from './Pager.css';
 
 
 export class Pager extends PureComponent {
-
-  static defaultProps = { 
-    getPosition: match => match.isExact ? 0 : 1
-  }
-  state = {
-    scroll : 0
-  }
-
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
       if (!this.props.match.isExact) {
@@ -24,22 +17,31 @@ export class Pager extends PureComponent {
 
   render() {
     
-    const { extended, match, location, master, detail, getPosition } = this.props;
-    const position = getPosition(match, location);
+    const {  master, detailOne, detailTwo, detailTree, detailFour, position } = this.props;
     
     return (
-      <div className={styles.pager} style={{ transform: `translate( ${position * -100}vw, 0vw )`, width: extended? '300vw':'200vw' }}
-      ref = {node => this.container = node}>
+      <div className={styles.pager} style={{ transform: `translate( ${position * -100}vw, 0vw )`, width: '500vw' }}
+        ref = {node => this.container = node}>
         <div className={styles.page}>
           {master}
         </div>
         <div className={styles.page}>
-          {detail}
+          {detailOne}
         </div>
-        {extended &&
+        {detailTwo &&
         <div className={styles.page}>
-          {extended}
+          {detailTwo}
         </div>
+        }
+        {detailTree &&
+        <div className={styles.page}>
+          {detailTree}
+        </div>
+        }
+        {detailFour &&
+          <div className={styles.page}>
+            {detailFour}
+          </div>
         }
       </div>
     );

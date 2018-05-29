@@ -1,0 +1,5 @@
+:local(.main) {
+  width: 100vw;
+  overflow-X: hidden;
+  position: fixed; 
+}
