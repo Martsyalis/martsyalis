@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import styles from './Pager.css';
 
 
-export class Pager extends PureComponent {
+class Pager extends PureComponent {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
       if (!this.props.match.isExact) {
@@ -16,8 +16,7 @@ export class Pager extends PureComponent {
   }
 
   render() {
-    
-    const {  master, detailOne, detailTwo, detailTree, detailFour, position } = this.props;
+    const { master, detailOne, detailTwo, detailTree, detailFour, position } = this.props;
     
     return (
       <div className={styles.pager} style={{ transform: `translate( ${position * -100}vw, 0vw )`, width: '500vw' }}

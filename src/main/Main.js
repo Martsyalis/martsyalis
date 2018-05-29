@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Pager from '../pager/Pager';
 import About from '../about/About';
 import Projects from '../projects/Projects';
@@ -7,42 +7,54 @@ import Blogs from '../blogs/Blogs';
 import Contact from '../contact/Contact';
 import styles from './Main.css';
 
-export default class MainPager extends PureComponent {
+class MainPager extends PureComponent {
   constructor() {
     super();
     this.state = {
-      position: 0
+      position: 0,
+      pagesArray:['about', 'projects', 'blogs', 'contact']
     };
-    this.handleLeft = ()=> {
-      console.log(this.state);
-      this.setState({ position: this.state.position-1 });
+    this.handleLeft = ()=>{
+      this.setState(
+        { position: this.state.position-1 },
+        this.props.history.push(`/${this.state.pagesArray[this.state.position-1]}`)
+      );
     };
     this.handleRight = ()=>{
-      this.setState({ position: this.state.position+1 });
+      this.setState(
+        { position: this.state.position+1 },
+        this.props.history.push(`/${this.state.pagesArray[this.state.position+1]}`)
+      );
     };
   }
   
   render(){
-    console.log('we got to mainPager at', this.state.position);
+    console.log('possition in main is', this.state.position);
     return (
       <div className={styles.main}>
-        <button onClick={this.handleLeft}>Left</button>
-        <button onClick={this.handleRight}>Right</button>
+        {this.state.position>0 && 
+          <button onClick={this.handleLeft}>Left</button>
+        }
+        {this.state.position<3 && 
+          <button onClick={this.handleRight}>Right</button>
+        }
         <Pager
           position={this.state.position}
           master={<About/>} 
           detailOne={
-            <Projects/>
+            <Route path="/projects" component={Projects}/>
           }
           detailTwo={
-            <Blogs/>
+            <Route path="/blogs" component={Blogs}/>
+
           }
           detailTree={
-            <Contact/>
+            <Route path="/contact" component={Contact}/>
           }
         />
       </div>
     );
   }
-
 }
+
+export default withRouter(MainPager);
