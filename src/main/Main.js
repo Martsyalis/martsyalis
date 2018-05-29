@@ -11,35 +11,36 @@ class MainPager extends PureComponent {
   constructor() {
     super();
     this.state = {
-      position: 0,
-      pagesArray:['about', 'projects', 'blogs', 'contact']
+      pagesArray:['/about', '/projects', '/blogs', '/contact']
     };
+    this.position = ()=> this.state.pagesArray.indexOf(this.props.history.location.pathname);
+
     this.handleLeft = ()=>{
       this.setState(
-        { position: this.state.position-1 },
-        this.props.history.push(`/${this.state.pagesArray[this.state.position-1]}`)
+        this.props.history.push(`${this.state.pagesArray[this.position()-1]}`)
       );
     };
     this.handleRight = ()=>{
       this.setState(
-        { position: this.state.position+1 },
-        this.props.history.push(`/${this.state.pagesArray[this.state.position+1]}`)
+        this.props.history.push(`${this.state.pagesArray[this.position()+1]}`)
       );
     };
   }
   
   render(){
-    console.log('possition in main is', this.state.position);
+    
+    console.log('possition in main is',this.position());
+
     return (
       <div className={styles.main}>
-        {this.state.position>0 && 
+        {this.position()>0 && 
           <button onClick={this.handleLeft}>Left</button>
         }
-        {this.state.position<3 && 
+        {this.position()<3 && 
           <button onClick={this.handleRight}>Right</button>
         }
-        <Pager
-          position={this.state.position}
+        <Pager 
+          position={this.position()}
           master={<About/>} 
           detailOne={
             <Route path="/projects" component={Projects}/>
