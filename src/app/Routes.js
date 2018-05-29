@@ -6,9 +6,7 @@ export default class Routes extends PureComponent{
   render(){
     return(
       <Switch>
-        <Route path="/" component={Main} />
-        {/* <Redirect to="/about" /> */}
-        {/* <Route exact path="/about" component={Main} /> */}
+        <Route path='/' render={Main}/>
       </Switch>
     );
   }

@@ -11,7 +11,7 @@ class MainPager extends PureComponent {
   constructor() {
     super();
     this.state = {
-      pagesArray:['/about', '/projects', '/blogs', '/contact']
+      pagesArray:['/', '/projects', '/blogs', '/contact']
     };
     this.position = ()=> this.state.pagesArray.indexOf(this.props.history.location.pathname);
 
