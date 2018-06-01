@@ -13,7 +13,8 @@ module.exports = {
   devServer: {
     contentBase: './build',
     port:3000,
-    compress: true
+    compress: true,
+    historyApiFallback: true
   },
   devtool: 'inline-source-map',
   plugins: [

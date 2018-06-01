@@ -1,14 +1,17 @@
 import React, { PureComponent } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import Main from '../main/Main';
  
-export default class Routes extends PureComponent{  
+class Routes extends PureComponent{  
   render(){
+    console.log('Routes is rendering');
     return(
       <Switch>
         <Route path='/' render={Main}/>
-        {/* <Redirect to='/'/> */}
+        {/* <Route to='/projects' render={Main}/> */}
       </Switch>
     );
   }
 }
+
+export default withRouter(Routes);

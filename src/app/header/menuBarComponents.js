@@ -37,7 +37,7 @@ export class BurgerMenu extends PureComponent {
       <div id="burgerMenu" 
         className={`navbar-menu ${active && 'is-active'}`}
         style={{ opacity: 0.9 }}
-        onClick={()=> isBurgerMenu && onClick()}
+        onClick={()=> isBurgerMenu? onClick : null}
       >
         <div className="navbar-end">
           <MenuLink to="/" text="Home" />

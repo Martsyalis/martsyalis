@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import { BurgerMenu, Brand } from './menuBarComponents';
+import { withRouter } from 'react-router-dom';
+
 import './MenuBar.css';
 
-export default class MenuBar extends PureComponent{
+class MenuBar extends PureComponent{
   
   state = { open: false }
 
@@ -22,4 +24,4 @@ export default class MenuBar extends PureComponent{
     );
   }
 }
-
+export default withRouter(MenuBar);

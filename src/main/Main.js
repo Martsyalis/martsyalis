@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Link } from 'react-router-dom';
 import Pager from '../pager/Pager';
 import About from '../about/About';
 import Projects from '../projects/Projects';
@@ -12,6 +12,7 @@ class MainPager extends PureComponent {
   state = {
     pagesArray:['/', '/projects', '/blogs', '/contact']
   };
+
   position = ()=> this.state.pagesArray.indexOf(this.props.history.location.pathname);
 
   handleLeft = ()=>{
@@ -48,6 +49,7 @@ class MainPager extends PureComponent {
             <Route path="/contact" component={Contact}/>
           }
         />
+        <Link to='/projects'>projectss</Link>
       </div>
     );
   }
