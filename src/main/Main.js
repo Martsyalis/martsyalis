@@ -8,29 +8,24 @@ import Contact from '../contact/Contact';
 import styles from './Main.css';
 
 class MainPager extends PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      pagesArray:['/', '/projects', '/blogs', '/contact']
-    };
-    this.position = ()=> this.state.pagesArray.indexOf(this.props.history.location.pathname);
 
-    this.handleLeft = ()=>{
-      this.setState(
-        this.props.history.push(`${this.state.pagesArray[this.position()-1]}`)
-      );
-    };
-    this.handleRight = ()=>{
-      this.setState(
-        this.props.history.push(`${this.state.pagesArray[this.position()+1]}`)
-      );
-    };
-  }
+  state = {
+    pagesArray:['/', '/projects', '/blogs', '/contact']
+  };
+  position = ()=> this.state.pagesArray.indexOf(this.props.history.location.pathname);
+
+  handleLeft = ()=>{
+    this.setState(
+      this.props.history.push(`${this.state.pagesArray[this.position()-1]}`)
+    );
+  };
+  handleRight = ()=>{
+    this.setState(
+      this.props.history.push(`${this.state.pagesArray[this.position()+1]}`)
+    );
+  };
   
   render(){
-    
-    console.log('possition in main is',this.position());
-
     return (
       <div className={styles.main}>
         {this.position()>0 && 

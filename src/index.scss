@@ -1,0 +1,66 @@
+// path to node_modules is required for transpiling, check scripts
+
+// 1. Import the initial variables
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/functions.sass";
+
+// 1.1 Import google fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+// 2. Set your own initial variables
+
+// JDRE color scheme
+$jdre-blue: #5FD0DF;
+$jdre-red: #CE0E2D;
+$jdre-grey: #7E7E7E;
+
+// 3. Set the derived variables
+
+// colors
+$white: $white;
+$black: $black;
+$light: $jdre-grey; //$white-ter;
+$dark: $grey-darker;
+$primary: $jdre-blue;
+$link: $blue;
+$info: $jdre-red; // $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+// fonts
+$family-serif: "Merriweather", "Georgia", serif;
+$family-sans-serif: "Roboto", sans-serif;
+$family-primary: $family-sans-serif;
+
+// 4. Setup your Custom Colors
+$linkedin: #0077b5;
+$linkedin-invert: findColorInvert($linkedin);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+$github: #333;
+$github-invert: findColorInvert($github);
+
+// 5. Add new color variables to the color map.
+@import "../../node_modules/bulma/sass/utilities/derived-variables.sass";
+$addColors: (
+  "twitter":($twitter, $twitter-invert),
+  "linkedin": ($linkedin, $linkedin-invert),
+  "github": ($github, $github-invert)
+);
+$colors: map-merge($colors, $addColors);
+
+// 6. Customize modifiers
+
+$modal-z: 1000;
+
+// 7. Import Font Awesome
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+// 8. Import the rest of Bulma
+@import "../../node_modules/bulma/bulma.sass";
+
+// 9. Custom classes
+.transparent {
+  opacity: 0;
+}
