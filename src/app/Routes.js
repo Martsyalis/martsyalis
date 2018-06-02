@@ -8,7 +8,6 @@ class Routes extends PureComponent{
     return(
       <Switch>
         <Route path='/' render={Main}/>
-        {/* <Route to='/projects' render={Main}/> */}
       </Switch>
     );
   }

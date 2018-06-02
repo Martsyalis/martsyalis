@@ -1,5 +1,4 @@
-:local(.main) {
-  width: 100vw;
+.mainPager {
   overflow-X: hidden;
   position: fixed; 
 }

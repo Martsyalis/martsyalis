@@ -28,7 +28,7 @@ class MainPager extends PureComponent {
   
   render(){
     return (
-      <div className={styles.main}>
+      <div>
         {this.position()>0 && 
           <button onClick={this.handleLeft}>Left</button>
         }
@@ -49,7 +49,6 @@ class MainPager extends PureComponent {
             <Route path="/contact" component={Contact}/>
           }
         />
-        <Link to='/projects'>projectss</Link>
       </div>
     );
   }

@@ -18,26 +18,26 @@ class Pager extends PureComponent {
   render() {
     const { master, detailOne, detailTwo, detailTree, detailFour, position } = this.props;
     return (
-      <div className={styles.pager} style={{ transform: `translate( ${position * -100}vw, 0vw )`, width: '500vw' }}
+      <div className="pager" style={{ transform: `translate( ${position * -100}vw, 0vw )`, width: '500vw' }}
         ref = {node => this.container = node}>
-        <div className={styles.page}>
+        <div className="page">
           {master}
         </div>
-        <div className={styles.page}>
+        <div className="page">
           {detailOne}
         </div>
         {detailTwo &&
-        <div className={styles.page}>
+        <div className="page">
           {detailTwo}
         </div>
         }
         {detailTree &&
-        <div className={styles.page}>
+        <div className="page">
           {detailTree}
         </div>
         }
         {detailFour &&
-          <div className={styles.page}>
+          <div className="page">
             {detailFour}
           </div>
         }
