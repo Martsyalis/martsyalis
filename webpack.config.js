@@ -65,14 +65,14 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: { limit: 5000 },
+        },
       }
-      // {
-      //   test: /\.(jpg|png|svg)$/,
-      //   use: {
-      //     loader: 'url-loader',
-      //     options: { limit: 5000 },
-      //   },
-      // }
     ]
   },
 };

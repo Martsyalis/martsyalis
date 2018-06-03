@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react';
-import { Route, withRouter, Link } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Pager from '../pager/Pager';
 import About from '../about/About';
 import Projects from '../projects/Projects';
 import Blogs from '../blogs/Blogs';
 import Contact from '../contact/Contact';
-import styles from './Main.css';
+import './Main.css';
+import IonicSkinnyLeft from 'react-icons/lib/io/ios-arrow-left';
+import IonicSkinnyRight from 'react-icons/lib/io/ios-arrow-right';
 
 class MainPager extends PureComponent {
 
@@ -28,12 +30,12 @@ class MainPager extends PureComponent {
   
   render(){
     return (
-      <div>
+      <div className="main-pager">
         {this.position()>0 && 
-          <button onClick={this.handleLeft}>Left</button>
+          <div className='left arrow-div' onClick={this.handleLeft}><IonicSkinnyLeft size={90}/></div>
         }
         {this.position()<3 && 
-          <button onClick={this.handleRight}>Right</button>
+          <div  className='right arrow-div' onClick={this.handleRight}><IonicSkinnyRight size={90}/></div>
         }
         <Pager 
           position={this.position()}

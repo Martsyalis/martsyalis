@@ -1,4 +1,17 @@
-.projects-grid{
-  display: flex;
-  justify-content: center;
+/* .project-tile{
+  height: 30vh;
+  margin: 1% 0;
+  width: 40vw;
+  object-fit: cover;
+} */
+
+#custom-tile{
+  padding:0;
+}
+
+@media screen and (min-width: 650px) {
+  .projects-grid {
+    display: flex;
+    justify-content: center;
+  }
 }

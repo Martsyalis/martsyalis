@@ -1,5 +1,35 @@
-.mainPager {
+.main-pager {
   overflow-X: hidden;
-  position: fixed; 
 }
 
+.arrow-div{
+  position:fixed;
+  z-index: 1000;
+  height: 82vh;
+  justify-content: center;
+  flex-direction: column;
+  text-align:center;
+}
+
+.arrow{
+  display: inline;
+}
+
+.left{
+  left:-2vw;
+}
+
+.right{
+  right:-2vw;
+}
+
+@media screen and (max-width: 650px) {
+  .arrow-div {
+    display: none;
+  }
+}
+@media screen and (min-width: 650px) {
+  .arrow-div {
+    display: flex;
+  }
+}
