@@ -6,3 +6,11 @@
 .navbar{
   background-color: transparent;
 }
+
+.is-active{
+  border-bottom: 3px solid blue;
+}
+
+.navbar-pager{
+  color:red;
+}

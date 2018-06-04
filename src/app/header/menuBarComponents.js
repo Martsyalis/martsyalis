@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 
 
@@ -21,7 +21,7 @@ export const Brand = ({ active, toggle })=>{
   );
 };
 
-export class BurgerMenu extends PureComponent {
+class NavMenu extends PureComponent {
 
   componentDidMount(){
     this.props.isBurgerMenu && document.addEventListener('click', this.props.close);
@@ -32,7 +32,7 @@ export class BurgerMenu extends PureComponent {
   }
   
   render(){
-    const { active, onClick, isBurgerMenu } = this.props;
+    const { active, onClick, isBurgerMenu, location } = this.props;
     return(
       <div id="burgerMenu" 
         className={`navbar-menu ${active && 'is-active'}`}
@@ -40,7 +40,7 @@ export class BurgerMenu extends PureComponent {
         onClick={()=> isBurgerMenu? onClick : null}
       >
         <div className="navbar-end">
-          <MenuLink to="/" text="Home" />
+          <MenuLink location={location} to="/" text="Home" />
           <MenuLink to="/projects" text="Projects" />
           <MenuLink to="/blogs" text="Blogs" />
           <MenuLink to="/contact" text="Get in Touch!" /> 
@@ -53,14 +53,19 @@ export class BurgerMenu extends PureComponent {
   }
 }
 
-const MenuLink = ({ children, to, text }) => (
-  <NavLink to={to} 
-    className="navbar-item" 
-    exact activeClassName="is-active" 
-  >
-    {text}
-  </NavLink> 
-);
+export default withRouter(NavMenu);
+
+const MenuLink = ({ children, to, text, location }) => {
+  console.log('location',text, location);
+  return(
+    <NavLink exact to={to} 
+      className="navbar-item" 
+      activeClassName="is-active" 
+    >
+      {text}
+    </NavLink> 
+  );
+};
 
 const ProjectsNav = ()=> {
   return(

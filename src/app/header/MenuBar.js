@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { BurgerMenu, Brand } from './menuBarComponents';
+import NavMenu, { Brand } from './menuBarComponents';
 import { withRouter } from 'react-router-dom';
 
 import './MenuBar.css';
@@ -17,8 +17,8 @@ class MenuBar extends PureComponent{
       <nav className="navbar" aria-label="main navigation">
         <Brand toggle={this.toggle} close={this.close} active={this.state.open}/>
         {this.state.open
-          ?<BurgerMenu location={this.props.location} isBurgerMenu={true} active ={this.state.open} close={this.close}/>
-          :<BurgerMenu/>
+          ?<NavMenu location={this.props.location} isBurgerMenu={true} active ={this.state.open} close={this.close}/>
+          :<NavMenu/>
         }
       </nav>
     );
