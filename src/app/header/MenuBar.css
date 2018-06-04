@@ -7,16 +7,18 @@
   background-color: transparent;
 }
 
-.is-active{
+.navbar-item{
+  width:8rem;
+  justify-content: center;
 }
 
 .navbar-pager{
   position: fixed;
   top: 0;
-  margin-top:0.5rem;
-  right: 28.8vw;
-  width: 7vw;
-  height: 30px;
+  margin-top: 0.2rem;
+  right: 24rem;
+  width: 8rem;
+  height: 2rem;
   transition: transform 300ms ease-in-out;
   background-color:red;
 }

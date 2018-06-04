@@ -48,9 +48,6 @@ class NavMenu extends PureComponent {
           <MenuLink to="/projects" text="Projects" />
           <MenuLink to="/blogs" text="Blogs" />
           <MenuLink to="/contact" text="Get in Touch!" /> 
-          {!isBurgerMenu && 
-          <ProjectsNav/>
-          }
         </div>
       </div>
     );

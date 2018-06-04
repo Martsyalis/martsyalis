@@ -33,7 +33,7 @@ class MenuBar extends PureComponent{
           }
         </nav>
         <div className='navbar-pager'
-          style={{ transform: `translate( ${this.position() * 7}vw, 0vw )` }}>
+          style={{ transform: `translate( ${this.position() * 8}rem, 0rem )` }}>
         </div>
       </div>
     );
