@@ -21,7 +21,7 @@ class MenuBar extends PureComponent{
   close = () => this.setState({ open: false });
 
   render(){
-    console.log(this.position());
+    console.log(this.state.open);
 
     return(
       <div>

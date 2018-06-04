@@ -1,5 +1,5 @@
 .project-tile{
-  height: 40vh;
+  height: 50vh;
 }
 
 .custom-tile{
@@ -36,7 +36,7 @@
   text-align: center;
 }
 .custom-tile:hover .tile-curtain{
-  opacity: 1;
+  opacity: 0.7;
   /* transform: translateY(0);  */
 }
 

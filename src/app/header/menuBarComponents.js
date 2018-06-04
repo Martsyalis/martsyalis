@@ -23,10 +23,6 @@ export const Brand = ({ active, toggle })=>{
 
 class NavMenu extends PureComponent {
 
-
-  
-
-
   componentDidMount(){
     this.props.isBurgerMenu && document.addEventListener('click', this.props.close);
   }
@@ -39,7 +35,7 @@ class NavMenu extends PureComponent {
     const { active, onClick, isBurgerMenu, location } = this.props;
     return(
       <div id="burgerMenu" 
-        className={`navbar-menu ${!active && 'is-active'}`}
+        className={`navbar-menu ${active && 'is-active'}`}
         style={{ opacity: 0.9 }}
         onClick={()=> isBurgerMenu? onClick : null}
       >
