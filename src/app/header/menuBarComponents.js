@@ -23,6 +23,10 @@ export const Brand = ({ active, toggle })=>{
 
 class NavMenu extends PureComponent {
 
+
+  
+
+
   componentDidMount(){
     this.props.isBurgerMenu && document.addEventListener('click', this.props.close);
   }
@@ -35,17 +39,17 @@ class NavMenu extends PureComponent {
     const { active, onClick, isBurgerMenu, location } = this.props;
     return(
       <div id="burgerMenu" 
-        className={`navbar-menu ${active && 'is-active'}`}
+        className={`navbar-menu ${!active && 'is-active'}`}
         style={{ opacity: 0.9 }}
         onClick={()=> isBurgerMenu? onClick : null}
       >
-        <div className="navbar-end">
+        <div className="navbar-end">   
           <MenuLink location={location} to="/" text="Home" />
           <MenuLink to="/projects" text="Projects" />
           <MenuLink to="/blogs" text="Blogs" />
           <MenuLink to="/contact" text="Get in Touch!" /> 
           {!isBurgerMenu && 
-            <ProjectsNav/>
+          <ProjectsNav/>
           }
         </div>
       </div>
@@ -56,11 +60,10 @@ class NavMenu extends PureComponent {
 export default withRouter(NavMenu);
 
 const MenuLink = ({ children, to, text, location }) => {
-  console.log('location',text, location);
   return(
     <NavLink exact to={to} 
       className="navbar-item" 
-      activeClassName="is-active" 
+      // activeClassName="is-active" 
     >
       {text}
     </NavLink> 

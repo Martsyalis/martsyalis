@@ -3,6 +3,7 @@
   position: relative;
   margin-top:10vh;
   transition: transform 300ms ease-in-out;
+  
   display: flex;
   align-items: flex-start;
 }

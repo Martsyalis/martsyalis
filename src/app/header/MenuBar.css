@@ -8,9 +8,19 @@
 }
 
 .is-active{
-  border-bottom: 3px solid blue;
 }
 
 .navbar-pager{
-  color:red;
+  position: fixed;
+  top: 0;
+  margin-top:0.5rem;
+  right: 28.8vw;
+  width: 7vw;
+  height: 30px;
+  transition: transform 300ms ease-in-out;
+  background-color:red;
+}
+
+.navbar-link.is-active, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:hover{
+  background-color: transparent;
 }
