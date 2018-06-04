@@ -4,7 +4,7 @@ import './Home.css';
 
 console.log('something');
 class Home extends PureComponent {
-
+  
   render(){
     return(
       <div className="home-div">

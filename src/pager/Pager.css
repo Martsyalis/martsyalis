@@ -1,7 +1,6 @@
 
 .pager {
-  position: relative;
-  margin-top:10vh;
+  /* position: absolute; */
   transition: transform 300ms ease-in-out;
   display: flex;
   align-items: flex-start;
@@ -14,7 +13,6 @@
   width: 100vw;
   height: auto;
   padding:1rem;
-  border: 1px solid black;
   display: inline-block;
   overflow-x: hidden;
   overflow-y: hidden;
