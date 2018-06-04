@@ -13,7 +13,7 @@ export default class App extends PureComponent {
           <header>
             <MenuBar/>
           </header>
-          <main id='main-container'>
+          <main>
             <Routes/>
           </main>
         </div>

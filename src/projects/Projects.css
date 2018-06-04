@@ -1,12 +1,11 @@
-/* .project-tile{
-  height: 30vh;
-  margin: 1% 0;
-  width: 40vw;
-  object-fit: cover;
-} */
+.project-tile{
+  height: 40vh;
+}
 
-#custom-tile{
+.custom-tile{
   padding:0;
+  background-size: cover;
+
 }
 
 @media screen and (min-width: 650px) {
@@ -14,4 +13,36 @@
     display: flex;
     justify-content: center;
   }
+}
+
+.project-column{
+  min-width: 350px;
+}
+
+.tile-curtain{
+  opacity: 0;
+  background-color: white;
+  width:100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+  /* transform: translateY(-100%); */
+}
+
+
+.hover-top{
+  opacity: 0;
+  transform: translateY(-200px);
+  z-index: 0;
+  text-align: center;
+}
+.custom-tile:hover .tile-curtain{
+  opacity: 1;
+  /* transform: translateY(0);  */
+}
+
+.custom-tile:hover .hover-top{
+  transition: all 0.5s ease-in-out;
+  transform: translateY(50px);
+  opacity: 1;
+  z-index: 1000;
 }

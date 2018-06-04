@@ -2,3 +2,7 @@
   position: fixed;
   right:0;
 }
+
+.navbar{
+  background-color: transparent;
+}

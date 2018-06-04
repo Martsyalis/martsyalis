@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
-export default class About extends PureComponent {
+class About extends PureComponent {
 
   render(){
     return (
@@ -13,3 +13,5 @@ export default class About extends PureComponent {
     );
   }
 } 
+
+export default withRouter(About);

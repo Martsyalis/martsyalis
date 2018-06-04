@@ -39,15 +39,17 @@ class MainPager extends PureComponent {
         }
         <Pager 
           position={this.position()}
-          master={<About/>} 
-          detailOne={
+          pageOne={
+            <Route path="/" component={About}/>
+          }         
+          pageTwo={
             <Route path="/projects" component={Projects}/>
           }
-          detailTwo={
+          pageThree={
             <Route path="/blogs" component={Blogs}/>
 
           }
-          detailTree={
+          pageFour={
             <Route path="/contact" component={Contact}/>
           }
         />
