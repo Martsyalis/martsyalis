@@ -1,11 +1,15 @@
 #show-nav{
-  display: block;
-  transition: transform 300ms ease-in-out;
-  
+  /* transition: transform 300ms ease-in-out; */
+  transition: all 1s ease-out;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+
 }
+/* @keyframes dropNav { from { top: -20rem; } to { top: 1rem; }  } */
 
 #hide-nav{
-  display: none;
+  transition: all 0.1s ease-in-out;
+  transform: translateY(-50px);
 }
 
 #burgerMenu{
@@ -31,14 +35,23 @@
     width: 8rem;
     height: 2.5rem;
     transition: transform 300ms ease-in-out;
-    background-color:red;
+    /* background-color:rgb(186, 20, 48); */
+    background-color: rgb(251, 104, 58);
+
   }
 }
 
 .navbar-link.is-active, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:hover{
-  background-color: rgba(240, 141, 124, 0.3);
+  /* background-color: rgba(240, 141, 124, 0.3); */
+  background-color: transparent;
   color: black;
   margin-top: 0.35rem;
   margin-bottom: 0.3rem;
   padding: 0;
+}
+
+.brand-image{
+  object-fit: cover;
+  width:3rem;
+  height:3rem;
 }

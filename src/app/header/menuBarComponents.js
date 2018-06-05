@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
-
+import smallFace from '../../assets/smalFace.jpg';
 
 
 export const Brand = ({ active, toggle })=>{
   return(
     <div className="navbar-brand">
       <a className="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28"/>
+        <div className="brand-image" alt=""/>
       </a>
       <a role="button" 
         className={`navbar-burger ${active && 'is-active'}`}

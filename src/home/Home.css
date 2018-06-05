@@ -5,14 +5,14 @@
   height:calc(100vh + 5.4rem);
   margin-top:-5.4rem;
   margin-left: -4rem;
-  background-size: cover;
+  /* background-size: cover; */
   z-index: 10000000;
 }
 
 .home-img{
   width: 100%;
-  height: calc(100vh + 3.4rem);
-  object-fit: fill;
+  height: calc(100vh + 6.4rem);
+  object-fit: cover;
 }
 
 .home-box{

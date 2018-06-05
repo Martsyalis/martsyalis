@@ -67,7 +67,7 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
-        test: /\.(jpg|png|svg)$/,
+        test: /\.(jpg|png|svg|jpeg)$/,
         use: {
           loader: 'url-loader',
           options: { limit: 5000 },

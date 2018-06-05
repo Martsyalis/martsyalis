@@ -7,18 +7,21 @@ import './Projects.css';
 export default class Project extends PureComponent{
 
   render(){
+    const { project } = this.props;
     return(
-      <div style={{ backgroundImage:`url(${this.props.img})` }} className="tile is-child box custom-tile">
+      <div style={{ backgroundImage:`url(${project.img})` }} className="tile is-child box custom-tile">
         
         
-        <Link to={`projects${this.props.img}`}>
-          <div className='project-tile' src={this.props.img} alt={this.props.alt}>
+        <Link to={project.url}>
+          <div className='project-tile'>
             <div className='tile-curtain'>
               <div className='hover-top'>
-                Top
+                {project.title}
+              </div>
+              <div className='hover-bottom'>
+                {project.tech}
               </div>
             </div>
-            
           </div>
         </Link>
       </div>

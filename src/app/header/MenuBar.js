@@ -23,9 +23,9 @@ class MenuBar extends PureComponent{
 
   render(){
     console.log('in header', this.props.showNav);
-
+    const atHome = this.props.history.location.pathname==='/home';
     return(
-      <div id={`${this.props.showNav? 'show-nav':'hide-nav'}`}>
+      <div id={`${this.props.showNav || !atHome? 'show-nav':'hide-nav'}`}>
         <nav className="navbar">
           <Brand toggle={this.toggle} close={this.close} active={this.state.open}/>
           {this.state.open

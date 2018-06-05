@@ -3,5 +3,11 @@
 
 .about-parent{
   width: 100vw;
-  height: 100vh;
+  max-height: calc(100vh - 72px);
+}
+
+.about-img{
+  width: 50vw;
+  object-fit: cover;
+  height: calc(100vh - 52px);
 }

@@ -28,21 +28,41 @@
   /* transform: translateY(-100%); */
 }
 
-
 .hover-top{
   opacity: 0;
-  transform: translateY(-200px);
+  transform: translateY(-1000px);
   z-index: 0;
   text-align: center;
+  margin:0;
+  /* display: none; */
 }
 .custom-tile:hover .tile-curtain{
-  opacity: 0.7;
+  opacity: 0.9;
+  color:black;
   /* transform: translateY(0);  */
 }
 
 .custom-tile:hover .hover-top{
   transition: all 0.5s ease-in-out;
-  transform: translateY(50px);
+  transform: translateY(100px);
   opacity: 1;
   z-index: 1000;
+  display: block;
+}
+
+.hover-bottom{
+  margin:0;
+  opacity: 0;
+  transform: translateY(1000px);
+  z-index: 0;
+  text-align: center;
+  /* display: none; */
+}
+
+.custom-tile:hover .hover-bottom{
+  transition: all 0.5s ease-in-out;
+  transform: translateY(200px);
+  opacity: 1;
+  z-index: 1000;
+  display: block;
 }
