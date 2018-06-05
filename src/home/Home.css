@@ -1,5 +1,39 @@
 .home-div{
-  background-color: blue;
-  height:100vh;
+  position:fixed;
+  width:100vw;
+  /* background-image:url('../assets/tower.jpg'); */
+  height:calc(100vh + 3.4rem);
+  margin-top:-3.4rem;
+  background-size: cover;
+  z-index: 10000000;
+}
 
+.home-img{
+  width: 100%;
+  height: calc(100vh + 3.4rem);
+  object-fit: fill;
+}
+
+.home-box{
+  position: absolute;
+  left: calc(50vw - 118px);
+  top: 78vh;
+  background-color: transparent;
+}
+
+.home-title{
+  opacity: 1;
+  color: grey;
+  font-size: 20px;
+}
+
+
+.home-icon{
+  margin-left:107px;
+  opacity: 1;
+  color: grey;
+}
+
+.home-box:hover{
+  cursor: pointer;
 }

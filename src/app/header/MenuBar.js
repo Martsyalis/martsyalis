@@ -9,7 +9,7 @@ class MenuBar extends PureComponent{
   state = { open: false }
 
   state = {
-    pagesArray:['/', '/projects', '/blogs', '/contact']
+    pagesArray:['/home', '/home/projects', '/home/blogs', '/home/contact']
   };
 
   position = ()=> {
@@ -21,7 +21,7 @@ class MenuBar extends PureComponent{
   close = () => this.setState({ open: false });
 
   render(){
-    console.log(this.state.open);
+    console.log(this.position());
 
     return(
       <div>
@@ -32,9 +32,11 @@ class MenuBar extends PureComponent{
             :<NavMenu/>
           }
         </nav>
+        {this.position() !== -1 &&
         <div className='navbar-pager'
           style={{ transform: `translate( ${this.position() * 8}rem, 0rem )` }}>
         </div>
+        }
       </div>
     );
   }

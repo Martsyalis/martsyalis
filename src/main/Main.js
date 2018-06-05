@@ -12,7 +12,7 @@ import IonicSkinnyRight from 'react-icons/lib/io/ios-arrow-right';
 class MainPager extends PureComponent {
 
   state = {
-    pagesArray:['/', '/projects', '/blogs', '/contact']
+    pagesArray:['/home', '/home/projects', '/home/blogs', '/home/contact']
   };
 
   position = ()=> this.state.pagesArray.indexOf(this.props.history.location.pathname);
@@ -30,29 +30,31 @@ class MainPager extends PureComponent {
   
   render(){
     return (
-      <div className="main-pager">
-        {this.position()>0 && 
-          <div className='left arrow-div' onClick={this.handleLeft}><IonicSkinnyLeft size={90}/></div>
-        }
-        {this.position()<3 && 
-          <div  className='right arrow-div' onClick={this.handleRight}><IonicSkinnyRight size={90}/></div>
-        }
-        <Pager 
-          position={this.position()}
-          pageOne={
-            <Route path="/" component={About}/>
-          }         
-          pageTwo={
-            <Route path="/projects" component={Projects}/>
+      <div>
+        <div className="main-pager">
+          {this.position()>0 && 
+            <div className='left arrow-div' onClick={this.handleLeft}><IonicSkinnyLeft size={90}/></div>
           }
-          pageThree={
-            <Route path="/blogs" component={Blogs}/>
+          {this.position()<3 && 
+            <div  className='right arrow-div' onClick={this.handleRight}><IonicSkinnyRight size={90}/></div>
+          }
+          <Pager 
+            position={this.position()}
+            pageOne={
+              <Route path="/home" component={About}/>
+            }         
+            pageTwo={
+              <Route path="/home/projects" component={Projects}/>
+            }
+            pageThree={
+              <Route path="/home/blogs" component={Blogs}/>
 
-          }
-          pageFour={
-            <Route path="/contact" component={Contact}/>
-          }
-        />
+            }
+            pageFour={
+              <Route path="/home/contact" component={Contact}/>
+            }
+          />
+        </div>
       </div>
     );
   }

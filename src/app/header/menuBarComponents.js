@@ -32,7 +32,7 @@ class NavMenu extends PureComponent {
   }
   
   render(){
-    const { active, onClick, isBurgerMenu, location } = this.props;
+    const { active, onClick, isBurgerMenu } = this.props;
     return(
       <div id="burgerMenu" 
         className={`navbar-menu ${active && 'is-active'}`}
@@ -40,10 +40,10 @@ class NavMenu extends PureComponent {
         onClick={()=> isBurgerMenu? onClick : null}
       >
         <div className="navbar-end">   
-          <MenuLink location={location} to="/" text="Home" />
-          <MenuLink to="/projects" text="Projects" />
-          <MenuLink to="/blogs" text="Blogs" />
-          <MenuLink to="/contact" text="Get in Touch!" /> 
+          <MenuLink to="/home" text="About Me" />
+          <MenuLink to="/home/projects" text="Projects" />
+          <MenuLink to="/home/blogs" text="Blogs" />
+          <MenuLink to="/home/contact" text="Get in Touch!" /> 
         </div>
       </div>
     );
