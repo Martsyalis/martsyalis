@@ -7,10 +7,10 @@ class Routes extends PureComponent{
   render(){
     return(
       <Switch>
-        <Route exact path="/" render={() =><Redirect to="/splash" />} />
-        <Route path='/splash' render={()=><Home />} />
-        <Route path='/home' render={Main} />
-        <Redirect to="/" />
+        <Route exact path="/" render={() =><Redirect to="/home" />} />
+        <Route path='/home' 
+          render={()=> <Main handleShowNav={this.props.handleShowNav} />} />
+        {/* <Redirect to="/" /> */}
       </Switch>
     );
   }

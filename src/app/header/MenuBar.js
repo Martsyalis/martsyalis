@@ -6,25 +6,26 @@ import './MenuBar.css';
 
 class MenuBar extends PureComponent{
   
-  state = { open: false }
 
   state = {
-    pagesArray:['/home', '/home/projects', '/home/blogs', '/home/contact']
+    pagesArray:['/home', '/home/projects', '/home/blogs', '/home/contact'],
+    open: false,
   };
 
   position = ()=> {
     return this.state.pagesArray.indexOf(this.props.history.location.pathname);
   }
 
+
   toggle = (event) =>this.setState(state => ({ open: !state.open }));
   
   close = () => this.setState({ open: false });
 
   render(){
-    console.log(this.position());
+    console.log('in header', this.props.showNav);
 
     return(
-      <div>
+      <div id={`${this.props.showNav? 'show-nav':'hide-nav'}`}>
         <nav className="navbar">
           <Brand toggle={this.toggle} close={this.close} active={this.state.open}/>
           {this.state.open

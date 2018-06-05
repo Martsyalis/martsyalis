@@ -6,15 +6,22 @@ import './App.css';
 
 export default class App extends PureComponent {
 
+  state = {
+    showNav: false
+  }
+
+  handleShowNav = () => this.setState({ showNav: true });
+
   render(){
+    console.log('in app', this.state.showNav);
     return (
       <Router>
         <div>
           <header>
-            <MenuBar/>
+            <MenuBar showNav={this.state.showNav}/>
           </header>
           <main>
-            <Routes/>
+            <Routes handleShowNav={this.handleShowNav}/>
           </main>
         </div>
       </Router>

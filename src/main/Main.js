@@ -32,16 +32,17 @@ class MainPager extends PureComponent {
     return (
       <div>
         <div className="main-pager">
-          {this.position()>0 && 
+          {/* {this.position()>0 && 
             <div className='left arrow-div' onClick={this.handleLeft}><IonicSkinnyLeft size={90}/></div>
           }
           {this.position()<3 && 
             <div  className='right arrow-div' onClick={this.handleRight}><IonicSkinnyRight size={90}/></div>
-          }
+          } */}
           <Pager 
             position={this.position()}
             pageOne={
-              <Route path="/home" component={About}/>
+              <Route path="/home" 
+                render={()=> <About handleShowNav={this.props.handleShowNav} />} />
             }         
             pageTwo={
               <Route path="/home/projects" component={Projects}/>
