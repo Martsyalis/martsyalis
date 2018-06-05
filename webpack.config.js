@@ -1,7 +1,7 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 
-const buildPath = `${__dirname}/build`;
+const buildPath = `${__dirname}/docs`;
 
 module.exports = {
   entry:'./src/index.js',
@@ -11,7 +11,7 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    contentBase: './public',
+    contentBase: './build',
     port:3000,
     compress: true,
     historyApiFallback: true
