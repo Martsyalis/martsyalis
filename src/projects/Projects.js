@@ -3,7 +3,7 @@ import './Projects.css';
 import Project from './Project';
 import travelShare from '../assets/travel-share.png';
 import JDREImg from '../assets/JDRE.png';
-import spaceExpImg from '../assets/space-explorers.png';
+import spaceExpImg from '../assets/space-explorers.jpeg';
 import fightsImg from '../assets/fights.png';
 import travelImg from '../assets/travel2.png';
 import weatherImg from '../assets/weather1.png';
