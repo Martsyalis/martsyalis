@@ -27,8 +27,9 @@ export default class Projects extends PureComponent {
 
   render(){
     return (
-      <div>
-        <Tabs handleSelect={this.handleSelect} selection={this.state.selection} />
+      <div >
+        {/* <Tabs handleSelect={this.handleSelect} selection={this.state.selection} /> */}
+        {/* <div className="projects-parent"> */}
         <div className="project-flex">
           <Project 
             className={`${this.isSelected(jdre)?'display-project': 'hide-project'}`}
@@ -51,6 +52,7 @@ export default class Projects extends PureComponent {
           />
           
         </div>
+        {/* </div> */}
       </div>
     );
   }

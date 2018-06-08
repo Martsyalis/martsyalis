@@ -19,6 +19,7 @@ export default class Project extends PureComponent{
   componentWillUnmount(){
     window.removeEventListener('animationend', this.handleTransitionEnd);
   }
+  
   render(){
     const { project, className } = this.props;
     return(

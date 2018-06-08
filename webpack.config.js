@@ -11,7 +11,7 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    contentBase: './build',
+    contentBase: './docs',
     port:3000,
     compress: true,
     historyApiFallback: true
@@ -21,9 +21,9 @@ module.exports = {
     new CleanWebpackPlugin(`${buildPath}/bundle.*.js`),
     new HtmlPlugin({ template: './src/index.html' }),
   ],
-  // resolve: {
-  //   symlinks: true
-  // },
+  resolve: {
+    symlinks: true
+  },
   module: {
     rules: [
       {
