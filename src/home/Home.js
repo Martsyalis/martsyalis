@@ -8,7 +8,7 @@ import ArrowDown from 'react-icons/lib/io/android-arrow-down';
 class Home extends PureComponent {
   
   state={ clicked:false }
-  
+
   handleDown= ()=> {
     this.setState({ clicked: true });
     this.props.handleShowNav();

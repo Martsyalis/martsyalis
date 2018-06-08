@@ -6,7 +6,11 @@ import Tabs from './Tabs';
 
 
 export default class Projects extends PureComponent {
-
+  
+  componentWillUnmount(){
+    //if pager is working this should never fire;
+    console.log('unmounting projects');
+  }
 
   state ={
     selected: false,

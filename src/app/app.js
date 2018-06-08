@@ -7,10 +7,13 @@ import './App.css';
 export default class App extends PureComponent {
 
   state = {
-    showNav: false
+    showNav: false,
+    seenHome:false,
   }
 
   handleShowNav = () => this.setState({ showNav: true });
+  handleSeenHome = () => this.setState({ seenHome: true });
+
 
   render(){
     console.log('in app', this.state.showNav);

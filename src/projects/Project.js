@@ -13,12 +13,7 @@ export default class Project extends PureComponent{
   handleTransitionEnd=(event)=>{
     if(event.animationName === 'fadeoutAndShrink'){
       event.target.classList.add('hidden');
-      // event.target.classList.remove('hide-project');
     }
-    if(event.animationName === 'fadeinAndGrow'){
-      // event.target.classList.remove('display-project');
-    }
-    // event.target.classList.remove('display-project');
   }
 
   componentWillUnmount(){

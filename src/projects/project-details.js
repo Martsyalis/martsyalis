@@ -1,4 +1,3 @@
-import travelShare from '../assets/travel-share.png';
 import JDREImg from '../assets/JDRE.png';
 import spaceExpImg from '../assets/space-explorers.jpeg';
 import fightsImg from '../assets/fights.png';

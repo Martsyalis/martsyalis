@@ -6,6 +6,12 @@ import face from '../assets/face.jpeg';
 
 class About extends PureComponent {
 
+  state = { seenHome: false }
+
+  componentWillUnmount(){
+    //if pager is working this should never fire;
+    console.log('unmounting');
+  }
   render(){
     const atHome = this.props.history.location.pathname==='/home';
     return (

@@ -60,7 +60,7 @@
 }
 
 .transition{
-  transform: translate(0, -200vh);
+  transform: translate(0, -600vh);
   transition: transform 800ms ease-in-out;
 }
 
