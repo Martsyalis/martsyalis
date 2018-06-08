@@ -10,16 +10,16 @@ export default class App extends PureComponent {
   render(){
     return (
       <Router>
-        <MyProvider>
-          <div>
+        <div>
+          <MyProvider>
             <header>
               <MenuBar/>
             </header>
             <main>
               <Routes/>
             </main>
-          </div>
-        </MyProvider>
+          </MyProvider>
+        </div>
       </Router>
     );
     

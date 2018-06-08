@@ -10,16 +10,17 @@ class Home extends PureComponent {
   
   state={ clicked:false }
 
-  handleDown= (handleShowNav)=> {
+  handleDown= (handleShowNav, handleSeenHome)=> {
     this.setState({ clicked: true });
     handleShowNav();
+    setTimeout(handleSeenHome, 1000);
   };
 
   render(){
     return(
       <Context.Consumer>
         {(context) =>(
-          <div className={`home-div ${this.state.clicked && 'transition'}`} onClick={()=>this.handleDown(context.handleShowNav)}> 
+          <div className={`home-div ${this.state.clicked && 'transition'}`} onClick={()=>this.handleDown(context.handleShowNav, context.handleSeenHome)}> 
             <img className="home-img" src={tower} alt="main" />
             <div className="home-name-box">
               <p className="home-name">Maryus Martsyalis</p>

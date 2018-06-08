@@ -19,7 +19,7 @@ class About extends PureComponent {
       <Context.Consumer>
         {(context) =>(
           <div className="about-parent">
-            {atHome && <Home /> }
+            {atHome && !context.state.seenHome && <Home /> }
             <div className="about-div">
               <img src={face} alt="" className="about-img" />
               

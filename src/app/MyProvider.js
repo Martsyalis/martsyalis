@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 export const Context = React.createContext();
 
@@ -24,7 +25,7 @@ class MyProvider extends PureComponent {
   }
 }
 
-export default MyProvider;
+export default withRouter(MyProvider);
 
 
 
