@@ -8,8 +8,7 @@ class Routes extends PureComponent{
     return(
       <Switch>
         <Route exact path="/" render={() =><Redirect to="/home" />} />
-        <Route path='/home' 
-          render={()=> <Main handleShowNav={this.props.handleShowNav} />} />
+        <Route path='/home' component={Main} />
         <Redirect to="/" />
       </Switch>
     );

@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import './About.css';
 import Home from '../home/Home';
 import face from '../assets/face.jpeg';
+import { Context } from '../app/MyProvider';
 
 class About extends PureComponent {
 
@@ -15,13 +16,17 @@ class About extends PureComponent {
   render(){
     const atHome = this.props.history.location.pathname==='/home';
     return (
-      <div className="about-parent">
-        {atHome && <Home handleShowNav={this.props.handleShowNav} /> }
-        <div className="about-div">
-          <img src={face} alt="" className="about-img" />
-          
-        </div>
-      </div>
+      <Context.Consumer>
+        {(context) =>(
+          <div className="about-parent">
+            {atHome && <Home /> }
+            <div className="about-div">
+              <img src={face} alt="" className="about-img" />
+              
+            </div>
+          </div>
+        )}
+      </Context.Consumer>
     );
   }
 } 

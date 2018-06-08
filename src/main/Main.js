@@ -17,32 +17,33 @@ class MainPager extends PureComponent {
 
   position = ()=> this.state.pagesArray.indexOf(this.props.history.location.pathname);
 
-  handleLeft = ()=>{
-    this.setState(
-      this.props.history.push(`${this.state.pagesArray[this.position()-1]}`)
-    );
-  };
-  handleRight = ()=>{
-    this.setState(
-      this.props.history.push(`${this.state.pagesArray[this.position()+1]}`)
-    );
-  };
+  // handleLeft = ()=>{
+  //   this.setState(
+  //     this.props.history.push(`${this.state.pagesArray[this.position()-1]}`)
+  //   );
+  // };
+  // handleRight = ()=>{
+  //   this.setState(
+  //     this.props.history.push(`${this.state.pagesArray[this.position()+1]}`)
+  //   );
+  // };
   
   render(){
     return (
       <div>
         <div className="main-pager">
+
           {/* {this.position()>0 && 
             <div className='left arrow-div' onClick={this.handleLeft}><IonicSkinnyLeft size={90}/></div>
           }
           {this.position()<3 && 
             <div  className='right arrow-div' onClick={this.handleRight}><IonicSkinnyRight size={90}/></div>
           } */}
+
           <Pager 
             position={this.position()}
             pageOne={
-              <Route path="/home" 
-                render={()=> <About handleShowNav={this.props.handleShowNav} />} />
+              <Route path="/home" component={About} />
             }         
             pageTwo={
               <Route path="/home/projects" component={Projects}/>

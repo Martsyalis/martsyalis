@@ -3,32 +3,27 @@ import Routes from './Routes';
 import { BrowserRouter as Router } from 'react-router-dom';
 import MenuBar from './header/MenuBar';
 import './App.css';
+import MyProvider from './MyProvider';
 
 export default class App extends PureComponent {
 
-  state = {
-    showNav: false,
-    seenHome:false,
-  }
-
-  handleShowNav = () => this.setState({ showNav: true });
-  handleSeenHome = () => this.setState({ seenHome: true });
-
-
   render(){
-    console.log('in app', this.state.showNav);
     return (
       <Router>
-        <div>
-          <header>
-            <MenuBar showNav={this.state.showNav}/>
-          </header>
-          <main>
-            <Routes handleShowNav={this.handleShowNav}/>
-          </main>
-        </div>
+        <MyProvider>
+          <div>
+            <header>
+              <MenuBar/>
+            </header>
+            <main>
+              <Routes/>
+            </main>
+          </div>
+        </MyProvider>
       </Router>
     );
     
   }
 } 
+
+

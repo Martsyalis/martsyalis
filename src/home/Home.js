@@ -3,31 +3,35 @@ import { Link, withRouter } from 'react-router-dom';
 import './Home.css';
 import tower from '../assets/tower.jpg';
 import ArrowDown from 'react-icons/lib/io/android-arrow-down';
+import { Context } from '../app/MyProvider';
 
 
 class Home extends PureComponent {
   
   state={ clicked:false }
 
-  handleDown= ()=> {
+  handleDown= (handleShowNav)=> {
     this.setState({ clicked: true });
-    this.props.handleShowNav();
+    handleShowNav();
   };
 
   render(){
-    console.log('clicked', this.state.clicked);
     return(
-      <div className={`home-div ${this.state.clicked && 'transition'}`} onClick={this.handleDown}> 
-        <img className="home-img" src={tower} alt="main" />
-        <div className="home-name-box">
-          <p className="home-name">Maryus Martsyalis</p>
-        </div>
-        <div className="home-box">
-          <p className="home-title">Welcome, Lets Get Started!</p>
-          <ArrowDown  className="home-icon" size={22}/>
-        </div>
+      <Context.Consumer>
+        {(context) =>(
+          <div className={`home-div ${this.state.clicked && 'transition'}`} onClick={()=>this.handleDown(context.handleShowNav)}> 
+            <img className="home-img" src={tower} alt="main" />
+            <div className="home-name-box">
+              <p className="home-name">Maryus Martsyalis</p>
+            </div>
+            <div className="home-box">
+              <p className="home-title">Welcome, Lets Get Started!</p>
+              <ArrowDown  className="home-icon" size={22}/>
+            </div>
 
-      </div>
+          </div>
+        )}
+      </Context.Consumer>
     );
   }
 }
