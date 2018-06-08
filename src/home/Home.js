@@ -19,6 +19,9 @@ class Home extends PureComponent {
     return(
       <div className={`home-div ${this.state.clicked && 'transition'}`} onClick={this.handleDown}> 
         <img className="home-img" src={tower} alt="main" />
+        <div className="home-name-box">
+          <p className="home-name">Maryus Martsyalis</p>
+        </div>
         <div className="home-box">
           <p className="home-title">Welcome, Lets Get Started!</p>
           <ArrowDown  className="home-icon" size={22}/>

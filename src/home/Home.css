@@ -26,6 +26,22 @@
   opacity: 1;
   color: grey;
   font-size: 20px;
+  animation: fadein 8s;
+
+}
+
+.home-name{
+  opacity: 1;
+  color: grey;
+  font-size: 60px;
+}
+
+.home-name-box{
+  position: absolute;
+  left: calc(50vw - 185px);
+  top: 20vh;
+  background-color: transparent;
+  animation: fadein 6s;
 }
 
 
@@ -39,7 +55,16 @@
   cursor: pointer;
 }
 
+.home-name-box:hover{
+  cursor: default;
+}
+
 .transition{
   transform: translate(0, -200vh);
   transition: transform 800ms ease-in-out;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

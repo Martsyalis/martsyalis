@@ -6,14 +6,30 @@ import './Projects.css';
 
 export default class Project extends PureComponent{
 
+  componentDidMount(){
+    window.addEventListener('animationend', this.handleTransitionEnd);
+
+  }
+  handleTransitionEnd=(event)=>{
+    if(event.animationName === 'fadeoutAndShrink'){
+      event.target.classList.add('hidden');
+      // event.target.classList.remove('hide-project');
+    }
+    if(event.animationName === 'fadeinAndGrow'){
+      // event.target.classList.remove('display-project');
+    }
+    // event.target.classList.remove('display-project');
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('animationend', this.handleTransitionEnd);
+  }
   render(){
-    const { project } = this.props;
+    const { project, className } = this.props;
     return(
-      <div style={{ backgroundImage:`url(${project.img})` }} className="tile is-child box custom-tile">
-        
-        
+      <div style={{ backgroundImage:`url(${project.img})` }} className={`project-tile-div ${className}`}>
         <Link to={project.url}>
-          <div className='project-tile'>
+          <div>
             <div className='tile-curtain'>
               <div className='hover-top'>
                 {project.title}

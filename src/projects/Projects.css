@@ -1,48 +1,62 @@
-.project-tile{
-  height: 50vh;
+.project-flex{
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.custom-tile{
-  padding:0;
-  background-size: cover;
-
+ .display-project{
+  animation: fadeinAndGrow 0.7s;
 }
 
-@media screen and (min-width: 650px) {
+.hide-project{
+  /* transform: scale(0);
+  transition: all 0.5s ease-in-out; */
+  animation: fadeoutAndShrink 0.7s;
+}
+
+.hidden{
+  display: none;
+}
+
+.project-tile-div{
+  position: relative;
+  /* border:3px solid grey; */
+  width: 300px;
+  background-size:cover;
+  height: 300px;
+}
+
+/* @media screen and (min-width: 650px) {
   .projects-grid {
     display: flex;
     justify-content: center;
   }
-}
-
-.project-column{
-  min-width: 350px;
-}
+} */
 
 .tile-curtain{
+  position: absolute;
   opacity: 0;
   background-color: white;
   width:100%;
   height: 100%;
   transition: opacity 0.5s ease-in-out;
-  /* transform: translateY(-100%); */
+  /* transform: translateY(-1000px); */
+  border: 3px sold black;
 }
 
 .hover-top{
-  opacity: 0;
+  opacity: 1;
   transform: translateY(-1000px);
   z-index: 0;
   text-align: center;
   margin:0;
-  /* display: none; */
 }
-.custom-tile:hover .tile-curtain{
+.project-tile-div:hover .tile-curtain{
   opacity: 0.9;
   color:black;
-  /* transform: translateY(0);  */
+  transform: translateY(0); 
 }
 
-.custom-tile:hover .hover-top{
+.project-tile-div:hover .hover-top{
   transition: all 0.5s ease-in-out;
   transform: translateY(100px);
   opacity: 1;
@@ -56,13 +70,47 @@
   transform: translateY(1000px);
   z-index: 0;
   text-align: center;
-  /* display: none; */
 }
 
-.custom-tile:hover .hover-bottom{
+.project-tile-div:hover .hover-bottom{
   transition: all 0.5s ease-in-out;
   transform: translateY(200px);
   opacity: 1;
   z-index: 1000;
   display: block;
+}
+
+
+@keyframes fadeinAndGrow {
+  from { 
+    top:150px;
+    left:150px;
+    opacity: 0;
+    max-width:1px;
+    max-height:1px;
+   }
+  to { 
+  top:0;
+  left:0;
+  opacity: 1;
+  max-width:300px;
+  max-height:300px;
+  }
+}
+
+@keyFrames fadeoutAndShrink{
+  from { 
+    top:0;
+    left:0;
+    opacity: 1;
+    max-width:300px;
+    max-height:300px;
+   }
+  to { 
+  top:150px;
+  left:150px;
+  max-width:0;
+  max-height:0;
+  }
+
 }

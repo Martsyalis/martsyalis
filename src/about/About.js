@@ -13,6 +13,7 @@ class About extends PureComponent {
         {atHome && <Home handleShowNav={this.props.handleShowNav} /> }
         <div className="about-div">
           <img src={face} alt="" className="about-img" />
+          
         </div>
       </div>
     );
