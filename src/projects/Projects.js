@@ -28,7 +28,7 @@ export default class Projects extends PureComponent {
   render(){
     return (
       <div >
-        {/* <Tabs handleSelect={this.handleSelect} selection={this.state.selection} /> */}
+        <Tabs handleSelect={this.handleSelect} selection={this.state.selection} />
         {/* <div className="projects-parent"> */}
         <div className="project-flex">
           <Project 

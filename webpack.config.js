@@ -21,19 +21,16 @@ module.exports = {
     new CleanWebpackPlugin(`${buildPath}/bundle.*.js`),
     new HtmlPlugin({ template: './src/index.html' }),
   ],
-  resolve: {
-    symlinks: true
-  },
   module: {
     rules: [
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader', // creates style nodes from JS strings
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader' // compiles Sass to CSS
-        ]
-      }, 
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     'style-loader', // creates style nodes from JS strings
+      //     'css-loader', // translates CSS into CommonJS
+      //     'sass-loader' // compiles Sass to CSS
+      //   ]
+      // }, 
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -50,7 +47,7 @@ module.exports = {
             loader: 'css-loader',
             options: { 
               sourceMap: true,
-              importLoaders: 1 
+              // importLoaders: 1 
             }
           },
           {
@@ -70,9 +67,9 @@ module.exports = {
         test: /\.(jpg|png|svg|jpeg)$/,
         use: {
           loader: 'url-loader',
-          options: { limit: 5000 },
+          // options: { limit: 5000 },
         },
-      }
+      },
     ]
   },
 };
