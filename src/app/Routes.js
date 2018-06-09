@@ -9,10 +9,9 @@ class Routes extends PureComponent{
     return(
       <Switch>
         <Route exact path="/" render={() =>{
-          console.log('we are in exact path');
           return(<Redirect to="/home" />);
         }} />
-        <Route path='/home' component={Main} />
+        <Route path='/*' component={Main} />
         {/* <Redirect to="/" /> */}
       </Switch>
     );

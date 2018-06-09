@@ -29,6 +29,7 @@ class MainPager extends PureComponent {
   // };
   
   render(){
+    console.log('we are in main');
     return (
       <div>
         <div className="main-pager">

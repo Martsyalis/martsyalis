@@ -13,7 +13,6 @@ export default class Tabs extends PureComponent {
 
   render(){
     const { handleSelect, selection } = this.props;
-    console.log('selection in tabs', selection);
     return (
       <div className="tabs is-centered">
         <ul>

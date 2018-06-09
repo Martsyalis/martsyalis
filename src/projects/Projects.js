@@ -7,10 +7,6 @@ import Tabs from './Tabs';
 
 export default class Projects extends PureComponent {
   
-  componentWillUnmount(){
-    //if pager is working this should never fire;
-    console.log('unmounting projects');
-  }
 
   state ={
     selected: false,
@@ -29,18 +25,18 @@ export default class Projects extends PureComponent {
     return (
       <div >
         <Tabs handleSelect={this.handleSelect} selection={this.state.selection} />
-        {/* <div className="projects-parent"> */}
-        <div className="project-flex">
-          {projects && projects.length && projects.map((project, i)=>(
-            <Project 
-              className={`${this.isSelected(project)?'display-project': 'hide-project'}`}
-              project={project}
-              key={i}
-            />
-          ))}
-          
+        <div className="projects-parent">
+          <div className="project-flex">
+            {projects && projects.length && projects.map((project, i)=>(
+              <Project 
+                className={`${this.isSelected(project)?'display-project': 'hide-project'}`}
+                project={project}
+                key={i}
+              />
+            ))}
+            
+          </div>
         </div>
-        {/* </div> */}
       </div>
     );
   }
