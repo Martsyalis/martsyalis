@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import './Projects.css';
 
 
-
 export default class Project extends PureComponent{
 
   componentDidMount(){
     window.addEventListener('animationend', this.handleTransitionEnd);
-
   }
+
   handleTransitionEnd=(event)=>{
     if(event.animationName === 'fadeoutAndShrink'){
       event.target.classList.add('hidden');

@@ -13,13 +13,13 @@
 }
 
  .display-project{
-  animation: fadeinAndGrow 0.5s;
+  animation: fadeinAndGrow 2s;
 }
 
 .hide-project{
   /* transform: scale(0);
   transition: all 0.5s ease-in-out; */
-  animation: fadeoutAndShrink 0.5s;
+  animation: fadeoutAndShrink 2s;
 }
 
 .hidden{
@@ -121,6 +121,7 @@
   max-width:0;
   max-height:0;
   opacity: 0;
+
   }
 
 }

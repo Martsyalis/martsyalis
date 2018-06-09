@@ -5,11 +5,15 @@ import Home from '../home/Home';
 
 class Routes extends PureComponent{  
   render(){
+    console.log('Routes are rendered');
     return(
       <Switch>
-        <Route exact path="/" render={() =><Redirect to="/home" />} />
+        <Route exact path="/" render={() =>{
+          console.log('we are in exact path');
+          return(<Redirect to="/home" />);
+        }} />
         <Route path='/home' component={Main} />
-        <Redirect to="/" />
+        {/* <Redirect to="/" /> */}
       </Switch>
     );
   }
