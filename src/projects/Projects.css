@@ -13,13 +13,11 @@
 }
 
  .display-project{
-  animation: fadeinAndGrow 2s;
+  animation: fadeinAndGrow 0.6s;
 }
 
 .hide-project{
-  /* transform: scale(0);
-  transition: all 0.5s ease-in-out; */
-  animation: fadeoutAndShrink 2s;
+  animation: fadeoutAndShrink 0.6s;
 }
 
 .hidden{
@@ -60,7 +58,7 @@
   margin:0;
 }
 .project-tile-div:hover .tile-curtain{
-  opacity: 0.9;
+  opacity: 1;
   color:black;
   transform: translateY(0); 
 }
@@ -121,7 +119,5 @@
   max-width:0;
   max-height:0;
   opacity: 0;
-
   }
-
 }

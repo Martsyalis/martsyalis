@@ -23,7 +23,7 @@ export default class Project extends PureComponent{
     const { project, className } = this.props;
     return(
       <div style={{ backgroundImage:`url(${project.img})` }} className={`project-tile-div ${className}`}>
-        <Link to={project.url}>
+        <a href={project.url}>
           <div>
             <div className='tile-curtain'>
               <div className='hover-top'>
@@ -34,7 +34,7 @@ export default class Project extends PureComponent{
               </div>
             </div>
           </div>
-        </Link>
+        </a>
       </div>
     );
   }
