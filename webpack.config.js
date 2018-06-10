@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: buildPath,
     filename: 'bundle.[hash].js',
-    publicPath: ''
+    publicPath: '/'
   },
   devServer: {
     contentBase: './docs',
@@ -23,14 +23,14 @@ module.exports = {
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.scss$/,
-      //   use: [
-      //     'style-loader', // creates style nodes from JS strings
-      //     'css-loader', // translates CSS into CommonJS
-      //     'sass-loader' // compiles Sass to CSS
-      //   ]
-      // }, 
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader' // compiles Sass to CSS
+        ]
+      }, 
       {
         test: /\.js$/,
         exclude: /node_modules/,
