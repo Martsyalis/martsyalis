@@ -2,8 +2,11 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import './Projects.css';
 
-
 export default class Project extends PureComponent{
+
+  state={
+    isActive: false
+  }
 
   componentDidMount(){
     window.addEventListener('animationend', this.handleTransitionEnd);

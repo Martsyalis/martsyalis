@@ -1,11 +1,14 @@
 import React, { PureComponent } from 'react';
+import ModalProject from '../projects/ModalProject';
 
 
 export default class Blogs extends PureComponent {
 
   render(){
     return (
-      <div>Dont have ay yet</div>
+      <div>
+        <ModalProject isActive={true}/>
+      </div>
     );
   }
 } 

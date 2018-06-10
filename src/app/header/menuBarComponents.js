@@ -6,9 +6,6 @@ import smallFace from '../../assets/smalFace.jpg';
 export const Brand = ({ active, toggle })=>{
   return(
     <div className="navbar-brand">
-      <a className="navbar-item" href="https://bulma.io">
-        <div className="brand-image" alt=""/>
-      </a>
       <a role="button" 
         className={`navbar-burger ${active && 'is-active'}`}
         onClick={toggle}
