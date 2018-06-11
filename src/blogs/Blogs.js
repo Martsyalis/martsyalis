@@ -7,7 +7,8 @@ export default class Blogs extends PureComponent {
   render(){
     return (
       <div>
-        <ModalProject isActive={true}/>
+        dont have any yet
+        {/* <ModalProject isActive={true}/> */}
       </div>
     );
   }
