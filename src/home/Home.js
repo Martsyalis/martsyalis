@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import './Home.css';
 import tower from '../assets/tower.jpg';
 import ArrowDown from 'react-icons/lib/io/android-arrow-down';

@@ -1,4 +1,36 @@
 .about-div{
+  display: flex;
+}
+
+.lex-div{
+  height: '60vh';
+  overflow-Y: 'scroll';
+  padding: '3rem';
+}
+
+.lex-column{
+  min-width: 25rem;
+  max-width:25rem;
+  overflow-Y: 'scroll';
+
+}
+
+.lex-parent{
+  margin-left: 5rem;
+  border: 1px solid black;
+  overflow-Y: 'scroll';
+
+}
+
+.lex-form{
+  position: absolute;
+  bottom: 0 ;
+  width:20rem;
+  display: flex;
+  overflow-Y: 'scroll';
+}
+
+.lex-form-div{
 }
 
 .about-parent{
@@ -10,4 +42,51 @@
   width: 50vw;
   object-fit: cover;
   height: calc(100vh - 52px);
+}
+
+.speechBubble {	
+  padding: 1rem;	
+  position: relative;	
+  background: #0ab;	
+  border-radius: .4em;	
+  margin-bottom:1rem;	
+	text-align: center;	
+	max-width: 60vw;
+  }	
+       
+.speechBubble:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 1.625em solid transparent;
+	border-left-color:  #00aabb;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -0.812em;
+	margin-right: -1.625em;
+}
+
+
+.speechBubbleBroker {
+	position: relative;
+	background: #32bb18;
+	border-radius: .4em;
+}
+
+.speechBubbleBroker:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 1.625em solid transparent;
+	border-right-color: #4dbb38;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -0.812em;
+	margin-left: -1.625em;
 }

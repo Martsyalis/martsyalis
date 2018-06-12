@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import './About.css';
 import Home from '../home/Home';
 import face from '../assets/face.jpeg';
 import { Context } from '../app/MyProvider';
+import Lex from './Lex';
 
 class About extends PureComponent {
 
@@ -18,7 +19,7 @@ class About extends PureComponent {
             {atHome && !context.state.seenHome && <Home /> }
             <div className="about-div">
               <img src={face} alt="" className="about-img" />
-              
+              <Lex/>
             </div>
           </div>
         )}
@@ -26,5 +27,7 @@ class About extends PureComponent {
     );
   }
 } 
+
+
 
 export default withRouter(About);

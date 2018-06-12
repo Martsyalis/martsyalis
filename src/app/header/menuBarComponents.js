@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
-import smallFace from '../../assets/smalFace.jpg';
 
 
 export const Brand = ({ active, toggle })=>{
@@ -49,7 +48,7 @@ class NavMenu extends PureComponent {
 
 export default withRouter(NavMenu);
 
-const MenuLink = ({ children, to, text, location }) => {
+const MenuLink = ({ to, text }) => {
   return(
     <NavLink exact to={to} 
       className="navbar-item" 
@@ -57,39 +56,5 @@ const MenuLink = ({ children, to, text, location }) => {
     >
       {text}
     </NavLink> 
-  );
-};
-
-const ProjectsNav = ()=> {
-  return(
-    <div className="navbar-item has-dropdown is-hoverable">
-      <a className="navbar-link" href="/documentation/overview/start/">
-        Projects
-      </a>
-      <div className="navbar-dropdown is-boxed">
-        <a className="navbar-item" href="/documentation/overview/start/">
-        Overview
-        </a>
-        <a className="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-        Modifiers
-        </a>
-        <a className="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-        Columns
-        </a>
-        <a className="navbar-item" href="https://bulma.io/documentation/layout/container/">
-        Layout
-        </a>
-        <a className="navbar-item" href="https://bulma.io/documentation/form/general/">
-        Form
-        </a>
-        <hr className="navbar-divider"/>
-        <a className="navbar-item" href="https://bulma.io/documentation/elements/box/">
-        Elements
-        </a>
-        <a className="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-        Components
-        </a>
-      </div>
-    </div>
   );
 };

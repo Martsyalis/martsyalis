@@ -6,8 +6,8 @@ import Projects from '../projects/Projects';
 import Blogs from '../blogs/Blogs';
 import Contact from '../contact/Contact';
 import './Main.css';
-import IonicSkinnyLeft from 'react-icons/lib/io/ios-arrow-left';
-import IonicSkinnyRight from 'react-icons/lib/io/ios-arrow-right';
+// import IonicSkinnyLeft from 'react-icons/lib/io/ios-arrow-left';
+// import IonicSkinnyRight from 'react-icons/lib/io/ios-arrow-right';
 
 class MainPager extends PureComponent {
 
@@ -29,7 +29,6 @@ class MainPager extends PureComponent {
   // };
   
   render(){
-    console.log('we are in main');
     return (
       <div>
         <div className="main-pager">

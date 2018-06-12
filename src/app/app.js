@@ -8,7 +8,6 @@ import MyProvider from './MyProvider';
 export default class App extends PureComponent {
 
   render(){
-    console.log('we are at app');
     return (
       <Router>
         <div>

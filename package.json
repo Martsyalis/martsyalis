@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "autoprefixer": "^8.5.2",
+    "aws-sdk": "^2.255.1",
     "babel-eslint": "^8.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

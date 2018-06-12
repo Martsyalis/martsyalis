@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 export const Context = React.createContext();
 
