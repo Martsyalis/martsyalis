@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
-import ModalProject from '../projects/ModalProject';
+import ModalProject from './ModalBlog';
+import comingSoon from '../assets/comingSoon.png';
 
 
 export default class Blogs extends PureComponent {
@@ -7,8 +8,7 @@ export default class Blogs extends PureComponent {
   render(){
     return (
       <div>
-        dont have any yet
-        {/* <ModalProject isActive={true}/> */}
+        <ModalProject isActive={true} img={comingSoon} text='Blogs page is still in the works!' />
       </div>
     );
   }
