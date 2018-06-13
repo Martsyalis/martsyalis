@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import './Blogs.css';
 
 
 export default class Project extends PureComponent{

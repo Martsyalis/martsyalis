@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import ModalProject from './ModalBlog';
 import comingSoon from '../assets/comingSoon.png';
-
+import './Blogs.css';
 
 export default class Blogs extends PureComponent {
 
