@@ -12,7 +12,7 @@ module.exports = {
   },
   devServer: {
     contentBase: './docs',
-    port:3000,
+    port:3001,
     compress: true,
     historyApiFallback: true
   },

@@ -19,7 +19,7 @@ class About extends PureComponent {
             {atHome && !context.state.seenHome && <Home /> }
             <div className="about-div">
               <img src={face} alt="" className="about-img" />
-              <Lex/>
+              <Lex />
             </div>
           </div>
         )}

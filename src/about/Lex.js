@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import './About.css';
 import { withRouter } from 'react-router-dom';
 import awsLexApi from '../services/awsLexApi';
+import MdSend from 'react-icons/lib/md/send';
 
 export class Lex extends PureComponent {
   state = {
@@ -49,7 +50,7 @@ export class Lex extends PureComponent {
     return ( 
       <div className="columns transition-item lex-parent">
 
-        <div className="column lex-column">
+        <div className="column lex-column card">
             
           <div className='lex-div'> 
             {chat.length && chat.map((chat, i) => (
@@ -62,10 +63,8 @@ export class Lex extends PureComponent {
             <div style={{ float:'left', clear: 'both' }} ref={(el) => { this.messagesEnd = el; }}></div>
           </div>
           <form   ref={node => this.form=node} className="lex-form" onSubmit={this.handlePost}>
-            <textarea name='message' className="textarea" rows="2"
-              style ={{ padding: '0', minWidth: '' }} 
-              placeholder='reply here'/>
-            <input style={{  marginLeft:'0.5rem' }} value={'post'} className="button is-link" type='submit'/>
+            <input name='message' className="text lex-text" placeholder='...'/>
+            <button className="button is-link" type='submit'> <MdSend/> </button>
           </form>
         </div>
       </div>
