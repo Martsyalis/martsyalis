@@ -3,23 +3,22 @@
 }
 
 .lex-div{
-  height: '60vh';
-  overflow-Y: 'scroll';
-  padding: '3rem';
+	padding: 3rem;
+	overflow-y: scroll;
+	max-height: 100%;
 }
 
 .lex-column{
   min-width: 25rem;
   max-width:25rem;
-  overflow-Y: 'scroll';
-
+	position: relative;
+	padding-bottom: 3rem;
 }
 
 .lex-parent{
   margin-left: 5rem;
   border: 1px solid black;
-  overflow-Y: 'scroll';
-
+	max-height: 80vh;
 }
 
 .lex-form{

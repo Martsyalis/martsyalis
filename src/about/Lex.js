@@ -7,12 +7,8 @@ export class Lex extends PureComponent {
   state = {
     chat:[
       {
-        client: true,
-        message:'whats your name'
-      },
-      {
         client: false,
-        message:'my name is Lex'
+        message:'Hey There! Chat with me to find out more about Maryus'
       }
     ]
   };
@@ -34,16 +30,17 @@ export class Lex extends PureComponent {
     newChat = this.state.chat.slice();
     newChat.push({ message:reply.message, client:false });
     this.setState({ chat: newChat });
-
-    this.refs.form.reset();  
+    this.form.reset();  
   }
 
   scrollToBottom = () => {
-    this.messagesEnd.scrollIntoView({ block: 'end', inline: 'end', behavior:'smooth' });
+    console.log('scrolling', this.messagesEnd);
+    this.messagesEnd.scrollIntoView();
   }
 
-  componentDidUpdate(prevProps) {
-    if (!prevProps.chat || prevProps.chat.length !== this.props.chat.chat.length)this.scrollToBottom();
+  componentDidUpdate(prevProps, prevState) {
+    console.log('happening with preState of', prevState);
+    if (prevState.chat.length !== this.state.chat.length) this.scrollToBottom();
   }
 
   render(){
@@ -55,20 +52,16 @@ export class Lex extends PureComponent {
         <div className="column lex-column">
             
           <div className='lex-div'> 
-            {chat.length
-              ?chat.map((chat, i) => (
-                <div key={i} style={{ display: 'flex', justifyContent: `${!chat.client? 'flex-end': 'flex-start'}` }}>
-                  <div className ={`speechBubble ${!chat.client? 'speechBubble' : 'speechBubbleBroker'}`} >
-                    <div className={'is-large'} key={i}>{chat.message}</div>
-                  </div>
+            {chat.length && chat.map((chat, i) => (
+              <div key={i} style={{ display: 'flex', justifyContent: `${!chat.client? 'flex-end': 'flex-start'}` }}>
+                <div className ={`speechBubble ${!chat.client? 'speechBubble' : 'speechBubbleBroker'}`} >
+                  <div className={'is-large'} key={i}>{chat.message}</div>
                 </div>
-              )
-              )
-              : <div>no chat is loaded yet</div>
-            }
+              </div>
+            ))}
             <div style={{ float:'left', clear: 'both' }} ref={(el) => { this.messagesEnd = el; }}></div>
           </div>
-          <form ref='form' className="lex-form" onSubmit={this.handlePost}>
+          <form   ref={node => this.form=node} className="lex-form" onSubmit={this.handlePost}>
             <textarea name='message' className="textarea" rows="2"
               style ={{ padding: '0', minWidth: '' }} 
               placeholder='reply here'/>
