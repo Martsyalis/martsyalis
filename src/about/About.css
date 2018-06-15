@@ -43,7 +43,7 @@
 .about-img {
 	object-fit: cover;
 	height: calc(100vh - 72px);
-	width: 35rem;
+	width: 40vw;
 	margin-left: 2rem;
 	margin-right: 2rem;
 }

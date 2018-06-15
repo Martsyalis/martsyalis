@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import './Home.css';
 import tower from '../assets/tower.jpg';
-import ArrowDown from 'react-icons/lib/io/android-arrow-down';
 import { Context } from '../app/MyProvider';
 
 
@@ -24,10 +23,10 @@ class Home extends PureComponent {
             <img className="home-img" src={tower} alt="main" />
             <div className="home-name-box">
               <p className="home-name">Maryus Martsyalis</p>
-              <p className="home-position">Full-Stack JS Developer</p>
+              <p className="home-position">Full Stack JS Developer</p>
             </div>
             <div className="home-box">
-              <p className="home-title">Welcome, Lets Get Started!</p>
+              <p className="home-title">Welcome, Enter my site!</p>
             </div>
 
           </div>
