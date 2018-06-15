@@ -2,22 +2,22 @@
   display: flex;
   justify-content:center;
   flex-direction: row;
-  width:100vw;
+  width:100%;
 }
 
 .project-flex{
   display: flex;
   flex-wrap: wrap;
 
-  /* width:80vw; */
+  width:900px;
 }
 
  .display-project{
-  animation: fadeinAndGrow 0.6s;
+  animation: fadeinAndGrow 0.6s linear;
 }
 
 .hide-project{
-  animation: fadeoutAndShrink 0.6s;
+  animation: fadeoutAndShrink 0.3s linear;
 }
 
 .hidden{
@@ -26,7 +26,7 @@
 
 .project-tile-div{
   position: relative;
-  /* border:3px solid grey; */
+  border:2px solid grey;
   width: 300px;
   background-size:cover;
   height: 300px;
@@ -89,14 +89,21 @@
 
 
 @keyframes fadeinAndGrow {
-  from { 
+  0%{ 
     top:150px;
     left:150px;
     opacity: 0;
     max-width:1px;
     max-height:1px;
    }
-  to { 
+   50%{
+    top:150px;
+    left:150px;
+    opacity: 0;
+    max-width:1px;
+    max-height:1px;
+   }
+  100%{ 
   top:0;
   left:0;
   opacity: 1;
@@ -106,18 +113,39 @@
 }
 
 @keyFrames fadeoutAndShrink{
-  from { 
+  0%{ 
     top:0;
     left:0;
     opacity: 1;
     max-width:300px;
     max-height:300px;
    }
-  to { 
+   
+  100%{ 
   top:150px;
   left:150px;
   max-width:0;
   max-height:0;
   opacity: 0;
   }
+}
+
+
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

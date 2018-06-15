@@ -3,6 +3,8 @@ import './Projects.css';
 import Project from './Project';
 import { projects } from './project-details';
 import Tabs from './Tabs';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 
 export default class Projects extends PureComponent {
@@ -22,19 +24,19 @@ export default class Projects extends PureComponent {
   }
 
   render(){
+    const projectsComponents = projects.map((project, i)=>(
+      <Project 
+        className={`${this.isSelected(project)?'display-project': 'hide-project'}`}
+        project={project}
+        key={i}
+      />
+    ));
     return (
       <div >
         <Tabs handleSelect={this.handleSelect} selection={this.state.selection} />
         <div className="projects-parent">
           <div className="project-flex">
-            {projects && projects.length && projects.map((project, i)=>(
-              <Project 
-                className={`${this.isSelected(project)?'display-project': 'hide-project'}`}
-                project={project}
-                key={i}
-              />
-            ))}
-            
+            {projects.length && projectsComponents}
           </div>
         </div>
       </div>

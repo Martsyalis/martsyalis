@@ -4,6 +4,8 @@ import fightsImg from '../assets/fights.png';
 import travelImg from '../assets/travel2.png';
 import weatherImg from '../assets/weather1.png';
 import JDRE2Img from '../assets/JDRE2.png';
+import portfolioImg from '../assets/tower.jpg';
+
 
 export const projects=[
   {
@@ -37,9 +39,9 @@ export const projects=[
     img: weatherImg
   },
   {
-    title:'Back office for JDRE',
-    tech: 'React, PWA, Redux, PWA, Web Notifications, Firebase, Chat',
-    url:'https://jdre-admin.herokuapp.com',
-    img: JDRE2Img
-  }
+    title: 'Portfolio',
+    tech:'React, Context Api, AWS, Serverless',
+    url:'http://martsyalis.com',
+    img: portfolioImg
+  },
 ];
