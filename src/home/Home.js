@@ -24,10 +24,11 @@ class Home extends PureComponent {
             <img className="home-img" src={tower} alt="main" />
             <div className="home-name-box">
               <p className="home-name">Maryus Martsyalis</p>
+              <p className="home-position">Full Stack Developer</p>
             </div>
             <div className="home-box">
-              <p className="home-title">Welcome, Lets Get Started!</p>
-              <ArrowDown  className="home-icon" size={22}/>
+              <p className="home-title">Welcome, Enter my site!</p>
+              {/* <ArrowDown  className="home-icon" size={22}/> */}
             </div>
 
           </div>

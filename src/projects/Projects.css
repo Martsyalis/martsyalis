@@ -1,15 +1,19 @@
 .projects-parent{
   display: flex;
   justify-content:center;
-  flex-direction: row;
-  width:100vw;
+  width:100%; 
 }
 
 .project-flex{
   display: flex;
   flex-wrap: wrap;
+  width:90vw;
+}
 
-  /* width:80vw; */
+.sub-project-flex{
+  display: flex;
+  flex-direction: column;
+  width:30vw;
 }
 
  .display-project{
@@ -26,8 +30,9 @@
 
 .project-tile-div{
   position: relative;
-  /* border:3px solid grey; */
-  width: 300px;
+  /* margin: 1rem; */
+  border:3px solid grey;
+  min-width: 300px;
   background-size:cover;
   height: 300px;
 }
@@ -45,7 +50,7 @@
   background-color: white;
   width:100%;
   height: 100%;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s;
   /* transform: translateY(-1000px); */
   border: 3px sold black;
 }
@@ -112,6 +117,7 @@
     opacity: 1;
     max-width:300px;
     max-height:300px;
+    /* margin:1rem; */
    }
   to { 
   top:150px;
@@ -119,5 +125,6 @@
   max-width:0;
   max-height:0;
   opacity: 0;
+  /* margin:0; */
   }
 }

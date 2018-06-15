@@ -28,6 +28,7 @@ export default class Projects extends PureComponent {
         <div className="projects-parent">
           <div className="project-flex">
             {projects && projects.length && projects.map((project, i)=>(
+              
               <Project 
                 className={`${this.isSelected(project)?'display-project': 'hide-project'}`}
                 project={project}
