@@ -18,7 +18,7 @@
 .home-box{
   position: absolute;
   left: calc(50vw - 69px);
-  top: 78vh;
+  top: 42vh;
   background-color: transparent;
 }
 
@@ -34,12 +34,21 @@
   opacity: 1;
   color: grey;
   font-size: 60px;
+  text-align: center;
+}
+
+.home-position{
+  opacity: 1;
+  font-size: 40px;
+  text-align: center;
+  color: grey;
+
 }
 
 .home-name-box{
   position: absolute;
   left: calc(50vw - 185px);
-  top: 20vh;
+  top: 11vh;
   background-color: transparent;
   animation: fadein 6s;
 }
