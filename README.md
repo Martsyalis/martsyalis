@@ -3,5 +3,7 @@
 First version of the portfolio. Made using webpack and React
 
 ##TODO:
-decide on one space or two spaces on /> in JSX 
-Fix routing issue of /home/*
+Fill space in about page
+Remove animation stagger going from PWA to All
+Add Blogs (probably publish some blog posts first)
+  

@@ -3,13 +3,9 @@ import './Projects.css';
 import Project from './Project';
 import { projects } from './project-details';
 import Tabs from './Tabs';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
-
 
 export default class Projects extends PureComponent {
   
-
   state ={
     selected: false,
     selection: ''
