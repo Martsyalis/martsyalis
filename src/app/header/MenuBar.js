@@ -20,7 +20,6 @@ class MenuBar extends PureComponent{
   toggle = (event) =>this.setState(state => ({ open: !state.open }));
   
   close = () => {
-    console.log('happening');
     this.setState({ open: false });
   }
 

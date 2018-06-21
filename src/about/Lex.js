@@ -25,9 +25,7 @@ export class Lex extends PureComponent {
     let newChat = this.state.chat.slice();
     newChat.push(message);
     this.setState({ chat: newChat });
-    console.log('chat after setState is', this.state.chat);
     const reply = await awsLexApi.postToLex(message.message);
-    console.log('reply is', reply.response);
     newChat = this.state.chat.slice();
     newChat.push({ message:reply.message, client:false });
     this.setState({ chat: newChat });

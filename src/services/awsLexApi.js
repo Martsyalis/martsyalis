@@ -9,7 +9,6 @@ let lexRunTime = new AWS.LexRuntime();
 let lexUserId = 'mediumBot' + Date.now();
 
 const postToLex = (message) => new Promise((resolve, reject) => {
-  console.log('we are sending to lex', message);
   let params = {
     botAlias: '$LATEST',
     botName: 'test',
@@ -18,11 +17,9 @@ const postToLex = (message) => new Promise((resolve, reject) => {
   };
   lexRunTime.postText(params, (err, data) => {
     if (err) {
-      console.log('error is', err);
       reject(err);
     }
     if (data) {
-      console.log('data is', data);
       resolve(data);
     }
   });

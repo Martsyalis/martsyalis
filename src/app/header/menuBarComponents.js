@@ -21,11 +21,9 @@ class NavMenu extends PureComponent {
 
   componentDidUpdate(prevProps){
     if(this.props.isBurgerMenu !== prevProps.isBurgerMenu && this.props.isBurgerMenu === true){
-      console.log('adding event listener');
       document.addEventListener('click', this.props.close);
     }
     if(this.props.isBurgerMenu !== prevProps.isBurgerMenu && this.props.isBurgerMenu === false){
-      console.log('removing event listener');
       document.removeEventListener('click', this.props.close);
     }
   }
