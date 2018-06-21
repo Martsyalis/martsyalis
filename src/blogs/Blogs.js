@@ -8,7 +8,7 @@ export default class Blogs extends PureComponent {
   render(){
     return (
       <div>
-        <ModalProject isActive={true} img={comingSoon} text='Blogs page is still in the works!' />
+        <ModalProject isActive={true} img={comingSoon} text='Page is in the works!' />
       </div>
     );
   }

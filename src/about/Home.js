@@ -21,9 +21,11 @@ class Home extends PureComponent {
         {(context) =>(
           <div className={`home-div ${this.state.clicked && 'transition'}`} onClick={()=>this.handleDown(context.handleShowNav, context.handleSeenHome)}> 
             <img className="home-img" src={tower} alt="main" />
-            <div className="home-name-box">
-              <p className="home-name">Maryus Martsyalis</p>
-              <p className="home-position">Full Stack JS Developer</p>
+            <div className='home-box-parent'>
+              <div className="home-box">
+                <p className="home-name">Maryus Martsyalis</p>
+                <p className="home-job">Full Stack JS Developer</p>
+              </div>
             </div>
           </div>
         )}
