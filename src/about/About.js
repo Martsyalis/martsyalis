@@ -17,10 +17,11 @@ class About extends PureComponent {
         {(context) =>(
           <div className={`${atHome && context.state.seenHome && 'about-parent'}`}>
             {atHome && !context.state.seenHome && <Home /> }
-            <div className="about-div">
+            {context.state.showNav && <div className="about-div">
               <img src={face} alt="" className="about-img" />
               <Lex />
             </div>
+            }
           </div>
         )}
       </Context.Consumer>
