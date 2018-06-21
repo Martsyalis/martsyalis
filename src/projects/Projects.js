@@ -28,7 +28,7 @@ export default class Projects extends PureComponent {
       />
     ));
     return (
-      <div >
+      <div className='projects-page-child' >
         <Tabs handleSelect={this.handleSelect} selection={this.state.selection} />
         <div className="projects-parent">
           <div className="project-flex">

@@ -5,9 +5,9 @@ export default class Project extends PureComponent{
  
   render(){
     return(
-      <div className={`modal ${this.props.isActive && 'is-active'}`}>
+      <div className={`modal blogs-parent ${this.props.isActive && 'is-active'}`}>
         <div className="modal-background"></div>
-        <div className="modal-card">
+        <div className="modal-card blogs-card">
           <header className="modal-card-head">
             <p className="modal-card-title">{this.props.text}</p>
           </header>

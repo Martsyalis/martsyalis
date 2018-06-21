@@ -15,31 +15,26 @@
   object-fit: cover;
 }
 
-.home-box{
-  position: absolute;
-  left: calc(50vw - 69px);
-  top: 42vh;
-  background-color: transparent;
-}
 
 .home-title{
   opacity: 1;
   color: grey;
-  font-size: 20px;
+  font-size: 1.8rem;
   animation: fadein 8s;
-
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .home-name{
   opacity: 1;
   color: grey;
-  font-size: 60px;
+  font-size: 4rem;
   text-align: center;
 }
 
 .home-position{
   opacity: 1;
-  font-size: 40px;
+  font-size: 3rem;
   text-align: center;
   color: grey;
 

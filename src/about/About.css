@@ -1,19 +1,24 @@
+.about-parent {
+	width: 100vw;
+	height:calc(100vh - 70px);
+	overflow-y: scroll;
+}
+
 .about-div {
 	display: flex;
 	width: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .lex-parent {
-	margin-left: 6rem;
-	height: calc(100vh - 72px);
 	max-height: calc(100vh - 72px);
 	margin-top: 0;
-	margin-right: 4rem;
 	width: 30rem;
 }
 
 .lex-column {
-	min-width: 25rem;
+	height: calc(100vh - 72px);
 	position: relative;
 	padding: 0;
 	padding-bottom: 3rem;
@@ -27,6 +32,7 @@
 }
 
 .lex-form {
+	border: 1px solid grey;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -35,17 +41,11 @@
 	overflow-Y: 'scroll';
 }
 
-.about-parent {
-	width: 100vw;
-	max-height: calc(100vh - 72px);
-}
 
 .about-img {
 	object-fit: cover;
 	height: calc(100vh - 72px);
-	width: 40vw;
-	margin-left: 2rem;
-	margin-right: 2rem;
+	width: 30rem;
 }
 
 .speechBubble {
@@ -96,4 +96,5 @@
 
 .lex-text {
 	width: 100%;
+	padding-left: 1rem;
 }

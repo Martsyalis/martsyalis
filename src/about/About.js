@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import './About.css';
-import Home from '../home/Home';
+import Home from './Home';
 import face from '../assets/face.jpeg';
 import { Context } from '../app/MyProvider';
 import Lex from './Lex';
@@ -15,7 +15,7 @@ class About extends PureComponent {
     return (
       <Context.Consumer>
         {(context) =>(
-          <div className="about-parent">
+          <div className={`${atHome && context.state.seenHome && 'about-parent'}`}>
             {atHome && !context.state.seenHome && <Home /> }
             <div className="about-div">
               <img src={face} alt="" className="about-img" />

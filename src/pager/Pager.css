@@ -11,8 +11,8 @@
 .page {
   /* margin-top:-1rem; */
   width: 100vw;
-  padding:1rem;
+  /* padding:1rem; */
   display: inline-block;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
+  height: calc(100vh - 53px);
 }

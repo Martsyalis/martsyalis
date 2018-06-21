@@ -48,9 +48,9 @@ export class Lex extends PureComponent {
     const { chat } = this.state;
     console.log('chat is', chat);
     return ( 
-      <div className="columns transition-item lex-parent">
+      <div className="transition-item lex-parent">
 
-        <div className="column lex-column card">
+        <div className="lex-column card">
             
           <div className='lex-div'> 
             {chat.length && chat.map((chat, i) => (
@@ -63,7 +63,7 @@ export class Lex extends PureComponent {
             <div style={{ float:'left', clear: 'both' }} ref={(el) => { this.messagesEnd = el; }}></div>
           </div>
           <form   ref={node => this.form=node} className="lex-form" onSubmit={this.handlePost}>
-            <input name='message' className="text lex-text" placeholder='...'/>
+            <input name='message' className="text lex-text" placeholder='Say hello!'/>
             <button className="button is-link" type='submit'> <MdSend/> </button>
           </form>
         </div>

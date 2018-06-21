@@ -1,18 +1,22 @@
+.projects-page-child{
+  overflow-y: scroll;
+  height: 100%;
+}
+
 .projects-parent{
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-direction: row;
-  width:100%;
+  width: 100%;
 }
 
 .project-flex{
   display: flex;
   flex-wrap: wrap;
-
-  width:900px;
+  width: 900px;
 }
 
- .display-project{
+.display-project{
   animation: fadeinAndGrow 0.6s linear;
 }
 
@@ -26,41 +30,40 @@
 
 .project-tile-div{
   position: relative;
-  border:2px solid grey;
+  border: 2px solid grey;
   width: 300px;
-  background-size:cover;
+  background-size: cover;
   height: 300px;
 }
-
-/* @media screen and (min-width: 650px) {
-  .projects-grid {
-    display: flex;
-    justify-content: center;
-  }
-} */
 
 .tile-curtain{
   position: absolute;
   opacity: 0;
   background-color: white;
-  width:100%;
+  width: 100%;
   height: 100%;
   transition: opacity 0.5s ease-in-out;
-  /* transform: translateY(-1000px); */
   border: 3px sold black;
 }
 
-.hover-top{
+.project-tile-div:hover .tile-curtain{
   opacity: 1;
+  color: black;
+  transform: translateY(0); 
+}
+
+.hover-top{
   transform: translateY(-1000px);
   z-index: 0;
   text-align: center;
-  margin:0;
+  margin: 0;
 }
-.project-tile-div:hover .tile-curtain{
-  opacity: 1;
-  color:black;
-  transform: translateY(0); 
+
+.hover-bottom{
+  margin: 0;
+  transform: translateY(1000px);
+  z-index: 0;
+  text-align: center;
 }
 
 .project-tile-div:hover .hover-top{
@@ -71,14 +74,6 @@
   display: block;
 }
 
-.hover-bottom{
-  margin:0;
-  opacity: 0;
-  transform: translateY(1000px);
-  z-index: 0;
-  text-align: center;
-}
-
 .project-tile-div:hover .hover-bottom{
   transition: all 0.5s ease-in-out;
   transform: translateY(200px);
@@ -86,7 +81,6 @@
   z-index: 1000;
   display: block;
 }
-
 
 @keyframes fadeinAndGrow {
   0%{ 
@@ -122,30 +116,16 @@
    }
    
   100%{ 
-  top:150px;
-  left:150px;
-  max-width:0;
-  max-height:0;
+  top: 150px;
+  left: 150px;
+  max-width: 0;
+  max-height: 0;
   opacity: 0;
   }
 }
 
-
-
-.example-enter {
-  opacity: 0.01;
-}
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.example-leave {
-  opacity: 1;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+@media screen and (max-width: 599px) {
+  .project-tile-div {
+    width: 100%;
+  }
 }
