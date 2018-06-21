@@ -127,5 +127,6 @@
 @media screen and (max-width: 599px) {
   .project-tile-div {
     width: 100%;
+    margin-bottom: 2rem;
   }
 }

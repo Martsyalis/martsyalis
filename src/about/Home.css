@@ -1,11 +1,9 @@
 .home-div{
   position:fixed;
   width:calc(100vw + 4rem);
-  /* background-image:url('../assets/tower.jpg'); */
   height:calc(100vh + 5.4rem);
   margin-top:-5.4rem;
   margin-left: -4rem;
-  /* background-size: cover; */
   z-index: 10000000;
 }
 

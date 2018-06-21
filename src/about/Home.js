@@ -24,7 +24,6 @@ class Home extends PureComponent {
             <div className="home-name-box">
               <p className="home-name">Maryus Martsyalis</p>
               <p className="home-position">Full Stack JS Developer</p>
-              <p className="home-title">Welcome, Enter my site!</p>
             </div>
           </div>
         )}
