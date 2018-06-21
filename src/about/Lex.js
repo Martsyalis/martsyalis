@@ -35,18 +35,15 @@ export class Lex extends PureComponent {
   }
 
   scrollToBottom = () => {
-    console.log('scrolling', this.messagesEnd);
     this.messagesEnd.scrollIntoView();
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('happening with preState of', prevState);
     if (prevState.chat.length !== this.state.chat.length) this.scrollToBottom();
   }
 
   render(){
     const { chat } = this.state;
-    console.log('chat is', chat);
     return ( 
       <div className="transition-item lex-parent">
 

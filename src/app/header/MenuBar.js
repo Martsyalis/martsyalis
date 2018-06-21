@@ -19,7 +19,10 @@ class MenuBar extends PureComponent{
 
   toggle = (event) =>this.setState(state => ({ open: !state.open }));
   
-  close = () => this.setState({ open: false });
+  close = () => {
+    console.log('happening');
+    this.setState({ open: false });
+  }
 
   render(){
     const atHome = this.props.history.location.pathname==='/home';
@@ -29,10 +32,7 @@ class MenuBar extends PureComponent{
           <div id={`${context.state.showNav || !atHome? 'show-nav':'hide-nav'}`}>
             <nav className="navbar">
               <Brand toggle={this.toggle} close={this.close} active={this.state.open}/>
-              {this.state.open
-                ?<NavMenu location={this.props.location} isBurgerMenu={true} active ={this.state.open} close={this.close}/>
-                :<NavMenu/>
-              }
+              <NavMenu isBurgerMenu={this.state.open} close={this.close}/>
             </nav>
             {this.position() !== -1 &&
             <div className='navbar-pager'

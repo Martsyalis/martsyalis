@@ -19,8 +19,15 @@ export const Brand = ({ active, toggle })=>{
 
 class NavMenu extends PureComponent {
 
-  componentDidMount(){
-    this.props.isBurgerMenu && document.addEventListener('click', this.props.close);
+  componentDidUpdate(prevProps){
+    if(this.props.isBurgerMenu !== prevProps.isBurgerMenu && this.props.isBurgerMenu === true){
+      console.log('adding event listener');
+      document.addEventListener('click', this.props.close);
+    }
+    if(this.props.isBurgerMenu !== prevProps.isBurgerMenu && this.props.isBurgerMenu === false){
+      console.log('removing event listener');
+      document.removeEventListener('click', this.props.close);
+    }
   }
     
   componentWillUnmount(){
@@ -28,14 +35,13 @@ class NavMenu extends PureComponent {
   }
   
   render(){
-    const { active, onClick, isBurgerMenu } = this.props;
+    const { isBurgerMenu } = this.props;
     return(
       <div id="burgerMenu" 
-        className={`navbar-menu ${active && 'is-active'}`}
+        className={`navbar-menu ${isBurgerMenu && 'is-active'}`}
         style={{ opacity: 0.9 }}
-        onClick={()=> isBurgerMenu? onClick : null}
       >
-        <div className="navbar-end">   
+        <div className="navbar-end mobile-navbar">   
           <MenuLink to="/home" text="About Me" />
           <MenuLink to="/home/projects" text="Projects" />
           <MenuLink to="/home/blogs" text="Blogs" />
