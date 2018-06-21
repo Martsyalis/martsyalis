@@ -3,6 +3,8 @@ background: #ECE9E6;
 background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  
 background: linear-gradient(to right, #FFFFFF, #ECE9E6); 
 overflow-x: hidden;
+font-family: 'Raleway';
+font-size: 13pt;
 }
 
 .hidden{

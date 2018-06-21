@@ -50,8 +50,7 @@
     width: 8rem;
     height: 2.5rem;
     transition: transform 300ms ease-in-out;
-    /* background-color:rgb(186, 20, 48); */
-    background-color: rgb(251, 104, 58);
+    background-color: #E31B6D;
 
   }
 }
