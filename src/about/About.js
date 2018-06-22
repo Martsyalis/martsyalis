@@ -7,7 +7,7 @@ import { Context } from '../app/MyProvider';
 import Lex from './Lex';
 
 class About extends PureComponent {
-
+  
   state = { seenHome: false }
 
   render(){
@@ -28,7 +28,5 @@ class About extends PureComponent {
     );
   }
 } 
-
-
 
 export default withRouter(About);

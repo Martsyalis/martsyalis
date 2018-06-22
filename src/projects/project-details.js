@@ -9,14 +9,20 @@ import portfolioImg from '../assets/tower.jpg';
 
 export const projects=[
   {
+    title: 'Portfolio',
+    tech:'React, Context Api, AWS, Cloud Services',
+    url:'http://martsyalis.com',
+    img: portfolioImg
+  },
+  {
     title: 'Jimmy Dorsey Real Estate',
-    tech: 'Node, React, Redux, Firebase, Mobile, FCM, Chat',
+    tech: 'Node, React, Redux, Firebase, Mobile, FCM, Cloud Services',
     url: 'https://jdre-app.herokuapp.com',
     img: JDREImg
   },
   {
     title: 'Travel Share',
-    tech:'React, Redux, Node, AWS, Sockets.io',
+    tech:'React, Redux, Node, AWS, Sockets.io, Cloud Services',
     url:'https://travelshareapp.herokuapp.com',
     img: travelImg
   },
@@ -37,11 +43,5 @@ export const projects=[
     tech: 'Vanilla JS, PWA, Shelling',
     url:'https://pwatesttest.herokuapp.com',
     img: weatherImg
-  },
-  {
-    title: 'Portfolio',
-    tech:'React, Context Api, AWS, Serverless',
-    url:'http://martsyalis.com',
-    img: portfolioImg
-  },
+  }
 ];

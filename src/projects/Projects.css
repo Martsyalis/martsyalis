@@ -2,6 +2,7 @@
   overflow-y: scroll;
   height: 100%;
   padding-bottom: 1rem;
+  padding-top: 2rem;
 }
 
 .projects-parent{
@@ -36,6 +37,7 @@
   background-size: cover;
   height: 300px;
   overflow: hidden;
+  background-position: center; 
 }
 
 .tile-curtain{

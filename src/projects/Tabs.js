@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import './Projects.css';
 import reactIcon from '../assets/reactIcon.png';
 import JsIcon from '../assets/nodeJs.png';
-import reduxIcon from '../assets/reduxIcon.png';
+import ServerlessIcon from '../assets/serverless.png';
 import PWAIcon from '../assets/PWAIcon.png';
 import NodeJsIcon from '../assets/nodeJsIcon.png';
 
@@ -34,10 +34,10 @@ export default class Tabs extends PureComponent {
               <span>Node.js</span>
             </a>
           </li>
-          <li className={`${selection=== 'Redux' && 'is-active'}`}>
-            <a onClick={()=>handleSelect('Redux')}>
-              <img alt='' src ={reduxIcon} className="icon is-small" />
-              <span>Redux</span>
+          <li className={`${selection=== 'Cloud Services' && 'is-active'}`}>
+            <a onClick={()=>handleSelect('Cloud Services')}>
+              <img alt='' src ={ServerlessIcon} className="icon is-small" />
+              <span>Cloud Services</span>
             </a>
           </li>
           <li className={`${selection=== 'PWA' && 'is-active'}`}>
