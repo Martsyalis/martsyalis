@@ -3,7 +3,6 @@ import spaceExpImg from '../assets/space-explorers.jpeg';
 import fightsImg from '../assets/fights.png';
 import travelImg from '../assets/travel2.png';
 import weatherImg from '../assets/weather1.png';
-import JDRE2Img from '../assets/JDRE2.png';
 import portfolioImg from '../assets/tower.jpg';
 
 

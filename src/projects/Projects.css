@@ -18,8 +18,12 @@
   width: 900px;
 }
 
-.display-project{
-  animation: fadeinAndGrow 0.6s linear;
+.display-project-with-delay{
+  animation: fadeinAndGrowDelay 0.6s linear;
+}
+
+.display-project-without-delay{
+  animation: fadeinAndGrow 0.4s linear;
 }
 
 .hide-project{
@@ -35,7 +39,7 @@
   border: 2px solid grey;
   width: 300px;
   background-size: cover;
-  height: 300px;
+  height: 280px;
   overflow: hidden;
   background-position: center; 
 }
@@ -98,6 +102,23 @@
     max-width:1px;
     max-height:1px;
    }
+  100%{ 
+  top:0;
+  left:0;
+  opacity: 1;
+  max-width:300px;
+  max-height:300px;
+  }
+}
+
+@keyframes fadeinAndGrowDelay {
+  0%{ 
+    top:150px;
+    left:150px;
+    opacity: 0;
+    max-width:1px;
+    max-height:1px;
+   }
    50%{
     top:150px;
     left:150px;
@@ -132,7 +153,7 @@
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 560px) {
   .project-tile-div {
     width: 100%;
     margin-bottom: 2rem;
