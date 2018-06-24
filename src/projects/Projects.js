@@ -61,8 +61,10 @@ export default class Projects extends PureComponent {
           selection={this.state.selection}
         />
         <div className="projects-parent">
-          <div className="project-flex">
-            {projects.length && projectsComponents}
+          <div className="projects-aunt">
+            <div className="project-flex"> 
+              {projects.length && projectsComponents}
+            </div>
           </div>
         </div>
       </div>

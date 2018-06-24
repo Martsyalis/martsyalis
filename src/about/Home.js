@@ -2,6 +2,9 @@ import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import './Home.css';
 import tower from '../assets/tower.jpg';
+import ArrowOne from 'react-icons/lib/io/android-arrow-forward';
+import ArrowSupport from 'react-icons/lib/io/android-arrow-up';
+
 import { Context } from '../app/MyProvider';
 
 
@@ -12,7 +15,7 @@ class Home extends PureComponent {
   handleDown= (handleShowNav, handleSeenHome)=> {
     this.setState({ clicked: true });
     handleShowNav();
-    setTimeout(handleSeenHome, 1000);
+    // setTimeout(handleSeenHome, 1000);
   };
 
   render(){
@@ -25,7 +28,14 @@ class Home extends PureComponent {
               <div className="home-box">
                 <p className="home-name">Maryus Martsyalis</p>
                 <p className="home-job">Full Stack JS Developer</p>
+                
+                <ArrowOne className={`down-arrow ${this.state.clicked && 'down-arrow-animation'}`}  size='45'/>
+                <div className={`down-arrow ${this.state.clicked && 'down-arrow-animation'}`}  size='45'></div>
+                <div className={`down-arrow ${this.state.clicked && 'down-arrow-animation'}`}  size='45'></div>
+
+
               </div>
+              
             </div>
           </div>
         )}

@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.projects-aunt{
+  
+}
+
 .project-flex{
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +43,7 @@
   border: 2px solid grey;
   width: 300px;
   background-size: cover;
-  height: 280px;
+  height: 300px;
   overflow: hidden;
   background-position: center; 
 }

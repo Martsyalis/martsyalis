@@ -40,14 +40,124 @@
   color: grey;
 }
 
+.down-arrow{
+  border:1px solid black;
+  margin-left: 60px;
+  width: 40px;
+  height:45px;
+  margin:10px;
+}
+
+.down-arrow-two{
+  margin-top: 150vh;
+}
+.down-arrow-three{
+  margin-left: 150px;
+  border: 1px solid black;
+  width:45px;
+  height: 45px;
+
+}
+.down-arrow-four{
+  margin-left: 300px;
+  border: 1px solid black;
+  width:45px;
+  height: 45px;
+
+}
+
+.down-arrow-animation{
+  /* animation:spin 2s; */
+  animation: fly-down 8s linear;
+  /* animation: push-the-page 2s; */
+}
+
+.down-arrow-animation-support{
+  /* animation:spin 2s; */
+  animation: support 8s linear;
+  /* animation: push-the-page 2s; */
+}
+
 .transition{
-  transform: translate(0, -600vh);
-  transition: transform 800ms ease-in-out;
+  animation: page-up 8s linear;
+  /* transform: translate(0, -600vh);
+  transition: transform 800ms ease-in-out; */
 }
 
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@keyframes fly-down{
+  0%{ 
+    margin-top:0px;
+    transform: rotate(0);
+  }
+  6%{
+    margin-top: 0px;
+    transform: rotate(90deg);
+  }
+  16%{
+    margin-top: 115%;
+    transform: rotate(90deg);
+  }
+  17%{
+    margin-top: 115%;
+    transform: rotate(270deg);
+  }
+  /* 32%{
+    margin-top: 115%;
+    transform: rotate(270deg);
+  } */
+  100%{
+    margin-top: 115%;
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes support{
+  0%{ 
+    margin-top:150vh;
+    /* transform: rotate(0); */
+  }
+  30%{
+    margin-top: 150vh;
+    /* transform: rotate(270deg); */
+  }
+  36%{
+    margin-top: 115%;
+    /* transform: rotate(270deg); */
+  }
+  100%{
+    margin-top: 115%;
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes page-up{
+  0%{
+    transform: translate(0, 0);
+  }
+
+  17%{
+    transform: translate(0, 0);
+  }
+  30%{
+    transform: translate(0, -50vh);
+  }
+  35%{
+    transform: translate(0, -40vh);
+  }
+  37%{
+    transform: translate(0, -45vh);
+  }
+  40%{
+    transform: translate(0, -30vh);
+  }
+  100%{
+    transform: translate(0, -130vh)
+  }
 }
 
 @media screen and (max-width: 500px) {
