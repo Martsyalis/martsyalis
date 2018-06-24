@@ -28,10 +28,15 @@ class Home extends PureComponent {
               <div className="home-box">
                 <p className="home-name">Maryus Martsyalis</p>
                 <p className="home-job">Full Stack JS Developer</p>
-                
-                <ArrowOne className={`down-arrow ${this.state.clicked && 'down-arrow-animation'}`}  size='45'/>
-                <div className={`down-arrow ${this.state.clicked && 'down-arrow-animation'}`}  size='45'></div>
-                <div className={`down-arrow ${this.state.clicked && 'down-arrow-animation'}`}  size='45'></div>
+                <div className='arrow-parent'>
+                  <ArrowOne className={`down-arrow ${this.state.clicked && 'down-arrow-animation'}`}  size='45'/>
+                  <div className={`down-arrow-two ${this.state.clicked && 'down-arrow-animation-support'}`} >
+                    <ArrowSupport size='45'/>
+                  </div>
+                  <div className={`down-arrow-three ${this.state.clicked && 'down-arrow-animation-support'}`}>
+                    <ArrowSupport size='45'/>
+                  </div>
+                </div>
 
 
               </div>
