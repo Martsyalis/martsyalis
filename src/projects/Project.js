@@ -21,7 +21,9 @@ export default class Project extends PureComponent {
   }
 
   render() {
+
     const { project, className } = this.props;
+    console.log(project.title, className);
     return (
       <div
         style={{ backgroundImage: `url(${project.img})` }}

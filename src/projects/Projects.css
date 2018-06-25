@@ -7,18 +7,21 @@
 
 .projects-parent {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: row;
   width: 100%;
 }
 
 .projects-aunt {
+
 }
 
 .project-flex {
   display: flex;
   flex-wrap: wrap;
-  width: 900px;
+  width: 1000px;
+  margin-left: calc(50vw - 450px )
+
 }
 
 .display-project-with-delay {
@@ -156,9 +159,23 @@
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
   .project-tile-div {
-    width: 100%;
+    width: 90vw;
     margin-bottom: 2rem;
+  }
+  .project-flex{
+    width:100%;
+    margin-left:0;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width:900px){
+  .project-flex{
+    width: 600px;
+    margin-left:0;
+    margin-left: calc(50vw - 300px)
+
   }
 }
