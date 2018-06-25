@@ -67,15 +67,15 @@
 }
 
 .down-arrow-animation {
-  animation: fly-down 8s linear;
+  animation: fly-down 5s linear;
 }
 
 .down-arrow-animation-support {
-  animation: support 8s linear;
+  animation: support 5s linear;
 }
 
 .transition {
-  animation: page-up 8s linear;
+  animation: page-up 5s linear;
   
 }
 

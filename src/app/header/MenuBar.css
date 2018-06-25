@@ -4,7 +4,6 @@
   transform: translateY(0);
   transition-delay: 0.5s;
 }
-/* @keyframes dropNav { from { top: -20rem; } to { top: 1rem; }  } */
 
 #hide-nav {
   transition: all 0.1s ease-in-out;
@@ -30,12 +29,6 @@ a.navbar-item:hover {
   margin-bottom: 0.3rem;
   padding: 0;
 }
-/* 
-.brand-image{
-  object-fit: cover;
-  width:3rem;
-  height:3rem;
-} */
 
 @media screen and (min-width: 1200px) {
   .navbar-item {
