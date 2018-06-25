@@ -1,99 +1,99 @@
 .about-parent {
-	width: 100vw;
-	height:calc(100vh - 70px);
-	overflow-y: scroll;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
 }
 
 .about-div {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .about-img {
-	object-fit: cover;
-	height: calc(100vh - 72px);
-	width: 30rem;
+  object-fit: cover;
+  height: calc(100vh - 72px);
+  width: 30rem;
 }
 
 .lex-parent {
-	max-height: calc(100vh - 72px);
-	margin-top: 0;
-	width: 30rem;
+  max-height: calc(100vh - 72px);
+  margin-top: 0;
+  width: 30rem;
 }
 
 .lex-column {
-	height: calc(100vh - 72px);
-	position: relative;
-	padding: 0;
-	padding-bottom: 3rem;
+  height: calc(100vh - 72px);
+  position: relative;
+  padding: 0;
+  padding-bottom: 3rem;
 }
 
 .lex-div {
-	padding-bottom: 3rem;
-	overflow-y: scroll;
-	max-height: 100%;
-	padding: 2rem;
+  padding-bottom: 3rem;
+  overflow-y: scroll;
+  max-height: 100%;
+  padding: 2rem;
 }
 
 .lex-form {
-	border: 1px solid grey;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	overflow-Y: 'scroll';
+  border: 1px solid grey;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  overflow-y: 'scroll';
 }
 
 .speechBubble {
-	padding: 1rem;
-	position: relative;
-	background: #0ab;
-	border-radius: .4em;
-	margin-bottom: 1rem;
-	text-align: center;
-	max-width: 60vw;
+  padding: 1rem;
+  position: relative;
+  background: #0ab;
+  border-radius: 0.4em;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 60vw;
 }
 
 .speechBubble:after {
-	content: '';
-	position: absolute;
-	right: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 1.625em solid transparent;
-	border-left-color: #00aabb;
-	border-right: 0;
-	border-top: 0;
-	margin-top: -0.812em;
-	margin-right: -1.625em;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 1.625em solid transparent;
+  border-left-color: #00aabb;
+  border-right: 0;
+  border-top: 0;
+  margin-top: -0.812em;
+  margin-right: -1.625em;
 }
 
 .speechBubbleBroker {
-	position: relative;
-	background: #32bb18;
-	border-radius: .4em;
+  position: relative;
+  background: #32bb18;
+  border-radius: 0.4em;
 }
 
 .speechBubbleBroker:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 1.625em solid transparent;
-	border-right-color: #4dbb38;
-	border-left: 0;
-	border-top: 0;
-	margin-top: -0.812em;
-	margin-left: -1.625em;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 1.625em solid transparent;
+  border-right-color: #4dbb38;
+  border-left: 0;
+  border-top: 0;
+  margin-top: -0.812em;
+  margin-left: -1.625em;
 }
 
 .lex-text {
-	width: 100%;
-	padding-left: 1rem;
+  width: 100%;
+  padding-left: 1rem;
 }

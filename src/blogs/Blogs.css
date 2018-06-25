@@ -4,17 +4,16 @@ height: 50vh;
 object-fit: contain;
 } */
 
-
-.blogs-card{
-  width:60vw;
+.blogs-card {
+  width: 60vw;
 }
 
-.blogs-parent{
+.blogs-parent {
   max-height: 100vh;
 }
 
 @media screen and (max-width: 599px) {
-  .blogs-card{
+  .blogs-card {
     width: 90vw;
   }
 }

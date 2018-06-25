@@ -1,11 +1,9 @@
-
 .pager {
   /* position: absolute; */
   transition: transform 500ms ease-in-out;
   display: flex;
   align-items: flex-start;
   min-height: calc(100vh - 125px);
-
 }
 
 .page {

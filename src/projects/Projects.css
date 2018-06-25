@@ -1,54 +1,53 @@
-.projects-page-child{
+.projects-page-child {
   overflow-y: scroll;
   height: 100%;
   padding-bottom: 1rem;
   padding-top: 2rem;
 }
 
-.projects-parent{
+.projects-parent {
   display: flex;
   justify-content: center;
   flex-direction: row;
   width: 100%;
 }
 
-.projects-aunt{
-  
+.projects-aunt {
 }
 
-.project-flex{
+.project-flex {
   display: flex;
   flex-wrap: wrap;
   width: 900px;
 }
 
-.display-project-with-delay{
+.display-project-with-delay {
   animation: fadeinAndGrowDelay 0.6s linear;
 }
 
-.display-project-without-delay{
+.display-project-without-delay {
   animation: fadeinAndGrow 0.4s linear;
 }
 
-.hide-project{
+.hide-project {
   animation: fadeoutAndShrink 0.3s linear;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.project-tile-div{
+.project-tile-div {
   position: relative;
   border: 2px solid grey;
   width: 300px;
   background-size: cover;
   height: 300px;
   overflow: hidden;
-  background-position: center; 
+  background-position: center;
 }
 
-.tile-curtain{
+.tile-curtain {
   position: absolute;
   opacity: 0;
   background-color: white;
@@ -58,13 +57,13 @@
   border: 3px sold black;
 }
 
-.project-tile-div:hover .tile-curtain{
+.project-tile-div:hover .tile-curtain {
   opacity: 1;
   color: black;
-  transform: translateY(0); 
+  transform: translateY(0);
 }
 
-.hover-top{
+.hover-top {
   transform: translateY(-1000px);
   z-index: 0;
   text-align: center;
@@ -73,16 +72,16 @@
   font-family: 'Raleway-bold';
 }
 
-.hover-bottom{
+.hover-bottom {
   margin: 0;
   transform: translateY(1000px);
   z-index: 0;
   text-align: center;
-  color: #E31B6D;
+  color: #e31b6d;
   font-size: 12pt;
 }
 
-.project-tile-div:hover .hover-top{
+.project-tile-div:hover .hover-top {
   transition: all 0.5s ease-in-out;
   transform: translateY(100px);
   opacity: 1;
@@ -90,7 +89,7 @@
   display: block;
 }
 
-.project-tile-div:hover .hover-bottom{
+.project-tile-div:hover .hover-bottom {
   transition: all 0.5s ease-in-out;
   transform: translateY(150px);
   opacity: 1;
@@ -99,61 +98,61 @@
 }
 
 @keyframes fadeinAndGrow {
-  0%{ 
-    top:150px;
-    left:150px;
+  0% {
+    top: 150px;
+    left: 150px;
     opacity: 0;
-    max-width:1px;
-    max-height:1px;
-   }
-  100%{ 
-  top:0;
-  left:0;
-  opacity: 1;
-  max-width:300px;
-  max-height:300px;
+    max-width: 1px;
+    max-height: 1px;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    max-width: 300px;
+    max-height: 300px;
   }
 }
 
 @keyframes fadeinAndGrowDelay {
-  0%{ 
-    top:150px;
-    left:150px;
+  0% {
+    top: 150px;
+    left: 150px;
     opacity: 0;
-    max-width:1px;
-    max-height:1px;
-   }
-   50%{
-    top:150px;
-    left:150px;
+    max-width: 1px;
+    max-height: 1px;
+  }
+  50% {
+    top: 150px;
+    left: 150px;
     opacity: 0;
-    max-width:1px;
-    max-height:1px;
-   }
-  100%{ 
-  top:0;
-  left:0;
-  opacity: 1;
-  max-width:300px;
-  max-height:300px;
+    max-width: 1px;
+    max-height: 1px;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    max-width: 300px;
+    max-height: 300px;
   }
 }
 
-@keyFrames fadeoutAndShrink{
-  0%{ 
-    top:0;
-    left:0;
+@keyframes fadeoutAndShrink {
+  0% {
+    top: 0;
+    left: 0;
     opacity: 1;
-    max-width:300px;
-    max-height:300px;
-   }
-   
-  100%{ 
-  top: 150px;
-  left: 150px;
-  max-width: 0;
-  max-height: 0;
-  opacity: 0;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  100% {
+    top: 150px;
+    left: 150px;
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
   }
 }
 

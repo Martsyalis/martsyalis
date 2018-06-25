@@ -7,26 +7,28 @@ import { Context } from '../app/MyProvider';
 import Lex from './Lex';
 
 class About extends PureComponent {
-  
-  state = { seenHome: false }
+  state = { seenHome: false };
 
-  render(){
-    const atHome = this.props.history.location.pathname==='/home';
+  render() {
+    const atHome = this.props.history.location.pathname === '/home';
     return (
       <Context.Consumer>
-        {(context) =>(
-          <div className={`${atHome && context.state.seenHome && 'about-parent'}`}>
-            {atHome && !context.state.seenHome && <Home /> }
-            {context.state.showNav && <div className="about-div">
-              <img src={face} alt="" className="about-img" />
-              <Lex />
-            </div>
-            }
+        {context => (
+          <div
+            className={`${atHome && context.state.seenHome && 'about-parent'}`}
+          >
+            {atHome && !context.state.seenHome && <Home />}
+            {context.state.showNav && (
+              <div className="about-div">
+                <img src={face} alt="" className="about-img" />
+                <Lex />
+              </div>
+            )}
           </div>
         )}
       </Context.Consumer>
     );
   }
-} 
+}
 
 export default withRouter(About);

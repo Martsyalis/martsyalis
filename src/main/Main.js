@@ -10,12 +10,12 @@ import './Main.css';
 // import IonicSkinnyRight from 'react-icons/lib/io/ios-arrow-right';
 
 class MainPager extends PureComponent {
-
   state = {
-    pagesArray:['/home', '/home/projects', '/home/blogs', '/home/contact']
+    pagesArray: ['/home', '/home/projects', '/home/blogs', '/home/contact']
   };
 
-  position = ()=> this.state.pagesArray.indexOf(this.props.history.location.pathname);
+  position = () =>
+    this.state.pagesArray.indexOf(this.props.history.location.pathname);
 
   // handleLeft = ()=>{
   //   this.setState(
@@ -27,12 +27,11 @@ class MainPager extends PureComponent {
   //     this.props.history.push(`${this.state.pagesArray[this.position()+1]}`)
   //   );
   // };
-  
-  render(){
+
+  render() {
     return (
       <div>
         <div className="main-pager">
-
           {/* {this.position()>0 && 
             <div className='left arrow-div' onClick={this.handleLeft}><IonicSkinnyLeft size={90}/></div>
           }
@@ -40,23 +39,12 @@ class MainPager extends PureComponent {
             <div  className='right arrow-div' onClick={this.handleRight}><IonicSkinnyRight size={90}/></div>
           } */}
 
-          <Pager 
+          <Pager
             position={this.position()}
-            pageOne={
-              <Route path="/home" component={About} />
-            } 
-
-            pageTwo={
-              <Route path="/home/projects" component={Projects}/>
-            }
-
-            pageThree={
-              <Route path="/home/blogs" component={Blogs}/>
-            }
-            
-            pageFour={
-              <Route path="/home/contact" component={Contact}/>
-            }
+            pageOne={<Route path="/home" component={About} />}
+            pageTwo={<Route path="/home/projects" component={Projects} />}
+            pageThree={<Route path="/home/blogs" component={Blogs} />}
+            pageFour={<Route path="/home/contact" component={Contact} />}
           />
         </div>
       </div>

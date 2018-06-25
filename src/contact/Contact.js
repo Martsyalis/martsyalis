@@ -2,10 +2,8 @@ import React, { PureComponent } from 'react';
 import './Contact.css';
 import { withRouter } from 'react-router-dom';
 
-
 class Contact extends PureComponent {
-
-  render(){
+  render() {
     return (
       <div className="contact-parent">
         <div className="contact-container">
@@ -35,9 +33,9 @@ class Contact extends PureComponent {
             <div className="field-body">
               <div className="field">
                 <p className="control is-expanded has-icons-left">
-                  <input className="input" type="text" placeholder="Name"/>
+                  <input className="input" type="text" placeholder="Name" />
                   <span className="icon is-small is-left">
-                    <i className="fas fa-user"></i>
+                    <i className="fas fa-user" />
                   </span>
                 </p>
               </div>
@@ -51,7 +49,7 @@ class Contact extends PureComponent {
             <div className="field-body">
               <div className="field">
                 <div className="control">
-                  <input className="input" type="text" placeholder="..."/>
+                  <input className="input" type="text" placeholder="..." />
                 </div>
               </div>
             </div>
@@ -64,30 +62,26 @@ class Contact extends PureComponent {
             <div className="field-body">
               <div className="field">
                 <div className="control">
-                  <textarea className="textarea" placeholder="..."></textarea>
+                  <textarea className="textarea" placeholder="..." />
                 </div>
               </div>
             </div>
           </div>
 
           <div className="field is-horizontal">
-            <div className="field-label">
-            </div>
+            <div className="field-label" />
             <div className="field-body">
               <div className="field">
                 <div className="control">
-                  <button className="button is-primary">
-          Send message
-                  </button>
+                  <button className="button is-primary">Send message</button>
                 </div>
               </div>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
-
     );
   }
-} 
+}
 
 export default withRouter(Contact);

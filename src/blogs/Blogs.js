@@ -4,12 +4,15 @@ import comingSoon from '../assets/comingSoon.png';
 import './Blogs.css';
 
 export default class Blogs extends PureComponent {
-
-  render(){
+  render() {
     return (
       <div>
-        <ModalProject isActive={true} img={comingSoon} text='Page is in the works!' />
+        <ModalProject
+          isActive={true}
+          img={comingSoon}
+          text="Page is in the works!"
+        />
       </div>
     );
   }
-} 
+}

@@ -5,12 +5,11 @@ import travelImg from '../assets/travel2.png';
 import weatherImg from '../assets/weather1.png';
 import portfolioImg from '../assets/tower.jpg';
 
-
-export const projects=[
+export const projects = [
   {
     title: 'Portfolio',
-    tech:'React, Context Api, AWS, Cloud Services',
-    url:'http://martsyalis.com',
+    tech: 'React, Context Api, AWS, Cloud Services',
+    url: 'http://martsyalis.com',
     img: portfolioImg
   },
   {
@@ -21,26 +20,26 @@ export const projects=[
   },
   {
     title: 'Travel Share',
-    tech:'React, Redux, Node, AWS, Sockets.io, Cloud Services',
-    url:'https://travelshareapp.herokuapp.com',
+    tech: 'React, Redux, Node, AWS, Sockets.io, Cloud Services',
+    url: 'https://travelshareapp.herokuapp.com',
     img: travelImg
   },
   {
     title: 'Space Exporers',
-    tech:'Node, CLI, Express',
-    url:'https://github.com/Martsyalis/space-explorers',
+    tech: 'Node, CLI, Express',
+    url: 'https://github.com/Martsyalis/space-explorers',
     img: spaceExpImg
   },
   {
     title: 'Parking Fights',
     tech: 'React, Redux',
-    url:'https://parking-fights.herokuapp.com',
+    url: 'https://parking-fights.herokuapp.com',
     img: fightsImg
   },
   {
-    title:'Weather PWA',
+    title: 'Weather PWA',
     tech: 'Vanilla JS, PWA, Shelling',
-    url:'https://pwatesttest.herokuapp.com',
+    url: 'https://pwatesttest.herokuapp.com',
     img: weatherImg
   }
 ];

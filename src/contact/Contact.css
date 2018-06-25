@@ -1,10 +1,10 @@
-.contact-parent{
+.contact-parent {
   margin-top: 8rem;
   width: 100vw;
   display: flex;
   justify-content: center;
 }
 
-.contact-container{
+.contact-container {
   min-width: 40vw;
 }
