@@ -15,7 +15,7 @@
 
 .home-box-parent {
   position: absolute;
-  top: 11vh;
+  top: 13vh;
   display: flex;
   justify-content: center;
   min-width: 100vw;
@@ -23,60 +23,40 @@
 
 .home-box {
   background-color: transparent;
-  /* animation: fadein 2s; */
+  animation: fadein 2s;
+  color: grey;
+  text-align: center;
+  font-size: 2rem;
+
+
 }
 
 .home-name {
-  opacity: 1;
-  color: grey;
-  font-size: 4rem;
-  text-align: center;
+  font-size: 3rem;
 }
 
 .home-job {
-  opacity: 1;
-  font-size: 3rem;
-  text-align: center;
-  color: grey;
+  font-size: 2rem;
 }
-.arrow-parent {
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  left: 0;
-  top: 37vh;
-  width: 100vw;
-  color: grey;
+.arrow{
+  font-size: 1.5rem;
+}
+.arrow:hover{
+  cursor: pointer;
 }
 
-.down-arrow {
-  /* animation: fadein 2s; */
-  font-size: 45px;
-}
+.arrow:hover .down-arrow{
+  transform: rotate(0.25turn);
+  transition-duration: 0.3s;
 
-.down-arrow-two {
-  margin-top: 100vh;
-}
-
-.down-arrow-three {
-  margin-top: 100vh;
-}
-
-.down-arrow-four {
-  margin-left: 300px;
-}
-
-.down-arrow-animation {
-  animation: fly-down 5s linear;
-}
-
-.down-arrow-animation-support {
-  animation: support 5s linear;
 }
 
 .transition {
-  animation: page-up 5s linear;
+  animation-name: page-up;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
+
 
 @keyframes fadein {
   0% {
@@ -90,154 +70,13 @@
   }
 }
 
-@keyframes fly-down {
-  0% {
-    margin-top: 0px;
-    /* transform: rotate(0); */
-  }
-  10% {
-    margin-top: 0px;
-    transform: rotate(90deg);
-  }
-  14% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(90deg);
-  }
-  15% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(270deg);
-  }
 
-  40% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(270deg);
-  }
-
-  42% {
-    margin-top: calc(100vh - 29vh);
-    transform: scale(1.3, 0.8) rotate(270deg);
-  }
-
-  43% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(270deg);
-  }
-
-  46% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(270deg);
-  }
-
-  48% {
-    margin-top: calc(100vh - 29vh);
-    transform: scale(1.3, 0.8) rotate(270deg);
-  }
-
-  49% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(270deg);
-  }
-
-  50% {
-    margin-top: calc(100vh - 29vh);
-    transform: scale(1.3, 0.8) rotate(270deg);
-  }
-
-  51% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(270deg);
-  }
-
-  53% {
-    margin-top: calc(100vh - 28vh);
-    transform: scale(1.5, 0.6) rotate(270deg);
-  }
-
-  55% {
-    margin-top: calc(100vh - 28vh);
-    transform: scale(1.5, 0.6) rotate(270deg);
-  }
-
-  65% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(270deg);
-  }
-
-  100% {
-    margin-top: calc(100vh - 28vh);
-    transform: rotate(270deg);
-  }
-}
-
-@keyframes support {
-  0% {
-    margin-top: 120vh;
-  }
-  50% {
-    margin-top: 120vh;
-  }
-  53% {
-    margin-top: calc(100vh - 28vh);
-  }
-
-  54% {
-    margin-top: calc(100vh - 28vh);
-    transform: scale(1.8, 0.3);
-  }
-
-  58% {
-    margin-top: calc(100vh - 28vh);
-    transform: scale(1.8, 0.3);
-  }
-
-  65% {
-    margin-top: calc(100vh - 28vh);
-    transform: scale(1);
-  }
-
-  100% {
-    margin-top: calc(100vh - 28vh);
-  }
-}
 
 @keyframes page-up {
-  0% {
+  from {
     transform: translate(0, 0);
   }
-  15% {
-    transform: translate(0, 0);
-  }
-  24% {
-    transform: translate(0, -20vh);
-  }
-  33% {
-    transform: translate(0, -37vh);
-  }
-  40% {
-    transform: translate(0, -47vh);
-  }
-
-  48% {
-    transform: translate(0, -47vh);
-  }
-
-  50% {
-    transform: translate(0, -40vh);
-  }
-
-  52% {
-    transform: translate(0, -20vh);
-  }
-
-  55% {
-    transform: translate(0, -20vh);
-  }
-
-  70% {
-    transform: translate(0, -130vh);
-  }
-
-  100% {
+  to {
     transform: translate(0, -130vh);
   }
 }
@@ -245,6 +84,9 @@
 @media screen and (max-width: 500px) {
   .home-box-parent {
     top: 22vh;
+  }
+  .arrow {
+    font-size: 1rem;
   }
 
   .home-name {

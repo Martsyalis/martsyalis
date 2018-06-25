@@ -12,16 +12,11 @@
   width: 100%;
 }
 
-.projects-aunt {
-
-}
-
 .project-flex {
   display: flex;
   flex-wrap: wrap;
   width: 1000px;
   margin-left: calc(50vw - 450px )
-
 }
 
 .display-project-with-delay {

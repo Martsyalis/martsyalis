@@ -1,8 +1,7 @@
 #show-nav {
   /* transition: transform 300ms ease-in-out; */
-  transition: all 1s ease-out;
+  transition: all 0.1s ease-out;
   transform: translateY(0);
-  transition-delay: 0.5s;
 }
 
 #hide-nav {

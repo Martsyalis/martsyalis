@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import './Home.css';
 import tower from '../assets/tower.jpg';
 import ArrowOne from 'react-icons/lib/io/android-arrow-forward';
-import ArrowSupport from 'react-icons/lib/io/android-arrow-up';
 
 import { Context } from '../app/MyProvider';
 
@@ -13,7 +12,7 @@ class Home extends PureComponent {
   handleDown = (handleShowNav, handleSeenHome) => {
     this.setState({ clicked: true });
     handleShowNav();
-    setTimeout(handleSeenHome, 5000);
+    setTimeout(handleSeenHome, 1000);
   };
 
   render() {
@@ -26,30 +25,21 @@ class Home extends PureComponent {
               <div className="home-box">
                 <p className="home-name">Maryus Martsyalis</p>
                 <p className="home-job">Full Stack JS Developer</p>
-              </div>
-            </div>
-
-            <div className="arrow-parent">
-              <div
-                className={`down-arrow-two ${this.state.clicked &&
-                  'down-arrow-animation-support'}`}
-              >
-                <ArrowSupport size="45" />
-              </div>
-
-              <ArrowOne
-                onClick={() =>
-                  this.handleDown(context.handleShowNav, context.handleSeenHome)
-                }
-                className={`down-arrow ${this.state.clicked &&
-                  'down-arrow-animation'}`}
-              />
-
-              <div
-                className={`down-arrow-three ${this.state.clicked &&
-                  'down-arrow-animation-support'}`}
-              >
-                <ArrowSupport size="45" />
+                <p
+                  className="arrow"
+                  onClick={() =>
+                    this.handleDown(
+                      context.handleShowNav,
+                      context.handleSeenHome
+                    )
+                  }
+                >
+                  check out my work
+                  <ArrowOne
+                    className={`down-arrow ${this.state.clicked &&
+                      'down-arrow-animation'}`}
+                  />
+                </p>
               </div>
             </div>
           </div>
