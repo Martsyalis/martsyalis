@@ -13,7 +13,7 @@ class Home extends PureComponent {
   handleDown = (handleShowNav, handleSeenHome) => {
     this.setState({ clicked: true });
     handleShowNav();
-    setTimeout(handleSeenHome, 9000);
+    setTimeout(handleSeenHome, 8000);
   };
 
   render() {
@@ -22,9 +22,7 @@ class Home extends PureComponent {
         {context => (
           <div
             className={`home-div ${this.state.clicked && 'transition'}`}
-            onClick={() =>
-              this.handleDown(context.handleShowNav, context.handleSeenHome)
-            }
+            
           >
             <img className="home-img" src={tower} alt="main" />
             <div className="home-box-parent">
@@ -43,9 +41,11 @@ class Home extends PureComponent {
               </div>
 
               <ArrowOne
+                onClick={() =>
+                  this.handleDown(context.handleShowNav, context.handleSeenHome)
+                }
                 className={`down-arrow ${this.state.clicked &&
                   'down-arrow-animation'}`}
-                size="45"
               />
 
               <div
