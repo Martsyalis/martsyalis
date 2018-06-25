@@ -20,10 +20,7 @@ class Home extends PureComponent {
     return (
       <Context.Consumer>
         {context => (
-          <div
-            className={`home-div ${this.state.clicked && 'transition'}`}
-            
-          >
+          <div className={`home-div ${this.state.clicked && 'transition'}`}>
             <img className="home-img" src={tower} alt="main" />
             <div className="home-box-parent">
               <div className="home-box">

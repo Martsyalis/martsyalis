@@ -76,7 +76,6 @@
 
 .transition {
   animation: page-up 5s linear;
-  
 }
 
 @keyframes fadein {
@@ -149,17 +148,17 @@
     transform: rotate(270deg);
   }
 
-  52%{
+  52% {
     margin-top: calc(100vh - 28vh);
     transform: scale(1.5, 0.6) rotate(270deg);
   }
 
-  54%{
+  54% {
     margin-top: calc(100vh - 28vh);
     transform: scale(1.5, 0.6) rotate(270deg);
   }
 
-  55%{
+  55% {
     margin-top: calc(100vh - 28vh);
     transform: rotate(270deg);
   }
@@ -189,7 +188,7 @@
     margin-top: calc(100vh - 28vh);
     transform: scale(1, 1);
   }
-  
+
   100% {
     margin-top: calc(100vh - 28vh);
   }
@@ -208,23 +207,23 @@
   33% {
     transform: translate(0, -37vh);
   }
-  40%{
+  40% {
     transform: translate(0, -47vh);
   }
 
-  50%{
+  50% {
     transform: translate(0, -47vh);
   }
 
-  51%{
+  51% {
     transform: translate(0, -40vh);
   }
 
-  52%{
+  52% {
     transform: translate(0, -20vh);
   }
 
-  55%{
+  55% {
     transform: translate(0, -20vh);
   }
 
