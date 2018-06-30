@@ -11,23 +11,22 @@ class Contact extends PureComponent {
     wasSend: false,
     intent: '',
     email: '',
+    error: false,
     reply: 'Thank you for getting in touch, looking forward to talking to you!'
   }
 
   handlePost = async (data)=>{
-    console.log('message is', data);
     const { wasSend, ...message } = this.state;
     const response = await emailApi.postMessage(message);
-    if(response !== this.state.reply) this.setState({ reply: response });
+    if(response !== this.state.reply) this.setState({ reply: response, error: true });
     this.setState({ wasSend: true });
   }
 
   handleChange = ({ target }) => {
+    console.log('target is', target);
     this.setState(prevState => ({
-      data: {
-        ...prevState.data,
-        [target.name]: target.value
-      }
+      ...prevState.data,
+      [target.name]: target.value
     }));
   };
 
@@ -35,7 +34,7 @@ class Contact extends PureComponent {
     return (
       <div>
         { this.state.wasSend ? (
-          <div className="notification is-success">
+          <div className={`notification ${this.state.error? 'is-error' : 'is-success'}`}>
             <button
               className="delete"
               onClick={() => this.setState({ wasSend: false })}

@@ -8,7 +8,7 @@ export default {
       body: JSON.stringify(message),
       method: 'POST'
     })
-      .then(response => response)
+      .then(() => 'Thank you for getting in touch, looking forward to talking to you!')
       .catch(err => {
         console.log('error in postMessage:', err);
         return 'There was an error sending the message. if you still to get in touch with Maryus please email him at Martsyalis@gmail.com. Thanks!';
