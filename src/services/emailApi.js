@@ -4,9 +4,12 @@ const LambdaUrl = 'https://3qgukogaod.execute-api.us-west-2.amazonaws.com/dev/me
 export default {
 
   postMessage(message) {
-    return fetch('https://3qgukogaod.execute-api.us-west-2.amazonaws.com/dev/message', {
+    return fetch(LambdaUrl, {
       body: JSON.stringify(message),
-      method: 'POST'
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      }
     })
       .then(() => 'Thank you for getting in touch, looking forward to talking to you!')
       .catch(err => {
