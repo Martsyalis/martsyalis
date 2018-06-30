@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import './Contact.css';
 import { withRouter } from 'react-router-dom';
 import emailApi from '../services/emailApi';
-
+import Email from 'react-icons/lib/md/mail-outline';
 class Contact extends PureComponent {
 
   state = {
@@ -32,7 +32,7 @@ class Contact extends PureComponent {
     return (
       <div>
         { this.state.wasSend ? (
-          <div className={`notification ${this.state.error? 'is-error' : 'is-success'}`}>
+          <div className={`notification ${this.state.error? 'is-danger' : 'is-success'}`}>
             <button
               className="delete"
               onClick={() => this.setState({ wasSend: false })}
@@ -51,9 +51,9 @@ class Contact extends PureComponent {
                     <p className="control is-expanded has-icons-left">
                       <input
                         name="email" value={this.state.email} onChange={this.handleChange}
-                        className="input" type="text" placeholder="Name" />
+                        className="input" type="text" />
                       <span className="icon is-small is-left">
-                        <i className="fas fa-user" />
+                        <Email/>
                       </span>
                     </p>
                   </div>

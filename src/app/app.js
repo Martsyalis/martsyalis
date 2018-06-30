@@ -4,6 +4,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import MenuBar from './header/MenuBar';
 import './App.css';
 import MyProvider from './MyProvider';
+import '../assets/favicon.ico';
+
+
 
 export default class App extends PureComponent {
 

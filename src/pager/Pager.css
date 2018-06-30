@@ -12,5 +12,5 @@
   /* padding:1rem; */
   display: inline-block;
   overflow: hidden;
-  height: calc(100vh - 51px);
+  height: calc(100vh - 51px + 2rem);
 }
