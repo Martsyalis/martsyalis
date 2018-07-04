@@ -1,5 +1,6 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const buildPath = `${__dirname}/docs`;
 
@@ -18,6 +19,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   plugins: [
+    new Dotenv(),
     new CleanWebpackPlugin(`${buildPath}/bundle.*.js`),
     new HtmlPlugin({ template: './src/index.html' }),
   ],

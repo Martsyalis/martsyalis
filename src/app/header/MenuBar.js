@@ -24,30 +24,34 @@ class MenuBar extends PureComponent {
     const atHome = this.props.history.location.pathname === '/home';
     return (
       <Context.Consumer>
-        {context => (
-          <div
-            id={`${context.state.showNav || !atHome ? 'show-nav' : 'hide-nav'}`}
-          >
-            <nav className="navbar">
-              <Brand
-                toggle={this.toggle}
-                close={this.close}
-                active={this.state.open}
-              />
-              <NavMenu isBurgerMenu={this.state.open} close={this.close} />
-            </nav>
-            {this.position() !== -1 && (
-              <div
-                className="navbar-pager"
-                style={{
-                  transform: `translate( ${this.position() * 8}rem, 0rem )`
-                }}
-              />
-            )}
-          </div>
-        )}
+        {context => {
+          return (
+            <div
+              id={`${context.state.showNav || !atHome ? 'show-nav' : 'hide-nav'}`}
+            >
+              <nav className="navbar">
+                <Brand
+                  toggle={this.toggle}
+                  close={this.close}
+                  active={this.state.open}
+                />
+                <NavMenu isBurgerMenu={this.state.open} close={this.close} />
+              </nav>
+              {this.position() !== -1 && (
+                <div
+                  className="navbar-pager"
+                  style={{
+                    transform: `translate( ${this.position() * 8}rem, 0rem )`
+                  }}
+                />
+              )}
+            </div>
+          );
+        }
+        }
       </Context.Consumer>
     );
   }
 }
+
 export default withRouter(MenuBar);

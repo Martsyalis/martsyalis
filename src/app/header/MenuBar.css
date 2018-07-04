@@ -2,7 +2,7 @@
   /* transition: transform 300ms ease-in-out; */
   transition: all 0.1s ease-out;
   transform: translateY(0);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 #hide-nav {

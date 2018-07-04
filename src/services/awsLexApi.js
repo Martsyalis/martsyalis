@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 
 AWS.config.region = 'us-west-2'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: 'us-west-2:8327d16c-1b2c-419c-95e0-20f5bec47cb5',
+  IdentityPoolId: process.env.IDENTITY_POOL_ID,
 });
 
 let lexRunTime = new AWS.LexRuntime();
