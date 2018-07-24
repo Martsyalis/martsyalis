@@ -4,7 +4,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 const buildPath = `${__dirname}/docs`;
 
 module.exports = {
-  entry:'./src/index.js',
+  entry: './src/index.js',
   output: {
     path: buildPath,
     filename: 'bundle.[hash].js',
@@ -12,14 +12,14 @@ module.exports = {
   },
   devServer: {
     contentBase: './build',
-    port:3000,
+    port: 3000,
     compress: true,
     historyApiFallback: true
   },
   devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin(`${buildPath}/bundle.*.js`),
-    new HtmlPlugin({ template: './src/index.html' }),
+    new HtmlPlugin({ template: './src/index.html' })
   ],
   // resolve: {
   //   symlinks: true
@@ -29,15 +29,15 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          "style-loader", // creates style nodes from JS strings
-          "css-loader", // translates CSS into CommonJS
-          "sass-loader" // compiles Sass to CSS
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader' // compiles Sass to CSS
         ]
-      }, 
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
@@ -48,31 +48,30 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: { 
+            options: {
               sourceMap: true,
-              importLoaders: 1 
+              importLoaders: 1
             }
           },
           {
             loader: 'postcss-loader',
             options: { sourceMap: true }
-          },
-          
+          }
         ]
       },
       {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: 'eslint-loader'
       },
       {
         test: /\.(jpg|png|svg|jpeg)$/,
         use: {
           loader: 'url-loader',
-          options: { limit: 5000 },
-        },
+          options: { limit: 5000 }
+        }
       }
     ]
-  },
+  }
 };

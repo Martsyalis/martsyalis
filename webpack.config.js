@@ -5,7 +5,7 @@ const Dotenv = require('dotenv-webpack');
 const buildPath = `${__dirname}/docs`;
 
 module.exports = {
-  entry:'./src/index.js',
+  entry: './src/index.js',
   output: {
     path: buildPath,
     filename: 'bundle.[hash].js',
@@ -13,7 +13,7 @@ module.exports = {
   },
   devServer: {
     contentBase: './docs',
-    port:3001,
+    port: 3001,
     compress: true,
     historyApiFallback: true
   },
@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     new Dotenv(),
     new CleanWebpackPlugin(`${buildPath}/bundle.*.js`),
-    new HtmlPlugin({ template: './src/index.html' }),
+    new HtmlPlugin({ template: './src/index.html' })
   ],
   module: {
     rules: [
@@ -32,11 +32,11 @@ module.exports = {
           'css-loader', // translates CSS into CommonJS
           'sass-loader' // compiles Sass to CSS
         ]
-      }, 
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
@@ -47,23 +47,22 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: { 
+            options: {
               sourceMap: true,
-              importLoaders: 1 
+              importLoaders: 1
             }
           },
           {
             loader: 'postcss-loader',
             options: { sourceMap: true }
-          },
-          
+          }
         ]
       },
       {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: 'eslint-loader'
       },
       {
         test: /\.(jpg|png|svg|jpeg)$/,
@@ -76,8 +75,8 @@ module.exports = {
       },
       {
         test: /\.ico$/,
-        loader: 'file-loader?name=[name].[ext]'  // <-- retain original file name
+        loader: 'file-loader?name=[name].[ext]' // <-- retain original file name
       }
     ]
-  },
+  }
 };

@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import emailApi from '../services/emailApi';
 import Email from 'react-icons/lib/md/mail-outline';
 class Contact extends PureComponent {
-
   state = {
     subject: '',
     message: '',
@@ -12,14 +11,15 @@ class Contact extends PureComponent {
     email: '',
     error: false,
     reply: 'Thank you for getting in touch, looking forward to talking to you!'
-  }
+  };
 
-  handlePost = async (data)=>{
+  handlePost = async data => {
     const { wasSend, error, reply, ...message } = this.state;
     const response = await emailApi.postMessage(message);
-    if(response !== this.state.reply) this.setState({ reply: response, error: true });
+    if (response !== this.state.reply)
+      this.setState({ reply: response, error: true });
     this.setState({ wasSend: true });
-  }
+  };
 
   handleChange = ({ target }) => {
     this.setState(prevState => ({
@@ -31,8 +31,12 @@ class Contact extends PureComponent {
   render() {
     return (
       <div>
-        { this.state.wasSend ? (
-          <div className={`notification ${this.state.error? 'is-danger' : 'is-success'}`}>
+        {this.state.wasSend ? (
+          <div
+            className={`notification ${
+              this.state.error ? 'is-danger' : 'is-success'
+            }`}
+          >
             <button
               className="delete"
               onClick={() => this.setState({ wasSend: false })}
@@ -50,10 +54,14 @@ class Contact extends PureComponent {
                   <div className="field">
                     <p className="control is-expanded has-icons-left">
                       <input
-                        name="email" value={this.state.email} onChange={this.handleChange}
-                        className="input" type="text" />
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                        className="input"
+                        type="text"
+                      />
                       <span className="icon is-small is-left">
-                        <Email/>
+                        <Email />
                       </span>
                     </p>
                   </div>
@@ -67,12 +75,14 @@ class Contact extends PureComponent {
                 <div className="field-body">
                   <div className="field">
                     <div className="control">
-                      <input className="input"
+                      <input
+                        className="input"
                         name="subject"
                         value={this.state.subject}
                         onChange={this.handleChange}
                         type="text"
-                        placeholder="..." />
+                        placeholder="..."
+                      />
                     </div>
                   </div>
                 </div>
@@ -89,7 +99,9 @@ class Contact extends PureComponent {
                         name="message"
                         value={this.state.message}
                         onChange={this.handleChange}
-                        className="textarea" placeholder="..." />
+                        className="textarea"
+                        placeholder="..."
+                      />
                     </div>
                   </div>
                 </div>
@@ -100,7 +112,12 @@ class Contact extends PureComponent {
                 <div className="field-body">
                   <div className="field">
                     <div className="control">
-                      <button className="button is-primary" onClick={this.handlePost}>Send message</button>
+                      <button
+                        className="button is-primary"
+                        onClick={this.handlePost}
+                      >
+                        Send message
+                      </button>
                     </div>
                   </div>
                 </div>

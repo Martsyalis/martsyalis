@@ -6,19 +6,21 @@ export const Context = React.createContext();
 class MyProvider extends PureComponent {
   state = {
     showNav: false,
-    seenHome:false,
-  }
+    seenHome: false
+  };
 
   handleShowNav = () => this.setState({ showNav: true });
   handleSeenHome = () => this.setState({ seenHome: true });
-  
-  render(){
-    return(
-      <Context.Provider value={{
-        state: this.state,
-        handleShowNav: this.handleShowNav,
-        handleSeenHome: this.handleSeenHome
-      }}>
+
+  render() {
+    return (
+      <Context.Provider
+        value={{
+          state: this.state,
+          handleShowNav: this.handleShowNav,
+          handleSeenHome: this.handleSeenHome
+        }}
+      >
         {this.props.children}
       </Context.Provider>
     );
@@ -26,6 +28,3 @@ class MyProvider extends PureComponent {
 }
 
 export default withRouter(MyProvider);
-
-
-

@@ -1,8 +1,8 @@
 // path to node_modules is required for transpiling, check scripts
 
 // 1. Import the initial variables
-@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
-@import "../../node_modules/bulma/sass/utilities/functions.sass";
+@import '../../node_modules/bulma/sass/utilities/initial-variables.sass';
+@import '../../node_modules/bulma/sass/utilities/functions.sass';
 
 // 1.1 Import google fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
@@ -10,9 +10,9 @@
 // 2. Set your own initial variables
 
 // JDRE color scheme
-$jdre-blue: #5FD0DF;
-$jdre-red: #CE0E2D;
-$jdre-grey: #7E7E7E;
+$jdre-blue: #5fd0df;
+$jdre-red: #ce0e2d;
+$jdre-grey: #7e7e7e;
 
 // 3. Set the derived variables
 
@@ -29,8 +29,8 @@ $warning: $yellow;
 $danger: $red;
 
 // fonts
-$family-serif: "Merriweather", "Georgia", serif;
-$family-sans-serif: "Roboto", sans-serif;
+$family-serif: 'Merriweather', 'Georgia', serif;
+$family-sans-serif: 'Roboto', sans-serif;
 $family-primary: $family-sans-serif;
 
 // 4. Setup your Custom Colors
@@ -42,11 +42,20 @@ $github: #333;
 $github-invert: findColorInvert($github);
 
 // 5. Add new color variables to the color map.
-@import "../../node_modules/bulma/sass/utilities/derived-variables.sass";
+@import '../../node_modules/bulma/sass/utilities/derived-variables.sass';
 $addColors: (
-  "twitter":($twitter, $twitter-invert),
-  "linkedin": ($linkedin, $linkedin-invert),
-  "github": ($github, $github-invert)
+  'twitter': (
+    $twitter,
+    $twitter-invert
+  ),
+  'linkedin': (
+    $linkedin,
+    $linkedin-invert
+  ),
+  'github': (
+    $github,
+    $github-invert
+  )
 );
 $colors: map-merge($colors, $addColors);
 
@@ -55,10 +64,10 @@ $colors: map-merge($colors, $addColors);
 $modal-z: 1000;
 
 // 7. Import Font Awesome
-@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+@import '../../node_modules/font-awesome/css/font-awesome.min.css';
 
 // 8. Import the rest of Bulma
-@import "../../node_modules/bulma/bulma.sass";
+@import '../../node_modules/bulma/bulma.sass';
 
 // 9. Custom classes
 .transparent {

@@ -6,27 +6,21 @@ import './App.css';
 import MyProvider from './MyProvider';
 import '../assets/favicon.ico';
 
-
-
 export default class App extends PureComponent {
-
-  render(){
+  render() {
     return (
       <Router>
         <div>
           <MyProvider>
             <header>
-              <MenuBar/>
+              <MenuBar />
             </header>
             <main>
-              <Routes/>
+              <Routes />
             </main>
           </MyProvider>
         </div>
       </Router>
     );
-    
   }
-} 
-
-
+}

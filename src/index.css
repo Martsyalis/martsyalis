@@ -1,12 +1,12 @@
-body{
-background: #ECE9E6;
-background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  
-background: linear-gradient(to right, #FFFFFF, #ECE9E6); 
-overflow-x: hidden;
-font-family: 'Raleway';
-font-size: 13pt;
+body {
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+  overflow-x: hidden;
+  font-family: 'Raleway';
+  font-size: 13pt;
 }
 
-.hidden{
+.hidden {
   display: none;
 }

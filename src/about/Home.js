@@ -12,9 +12,9 @@ class Home extends PureComponent {
   handleDown = (handleShowNav, handleSeenHome) => {
     this.setState({ clicked: true });
     handleShowNav();
-    setTimeout((()=>{
+    setTimeout(() => {
       handleSeenHome();
-    }), 600);
+    }, 600);
   };
 
   render() {

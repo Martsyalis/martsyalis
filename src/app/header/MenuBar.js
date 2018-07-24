@@ -27,7 +27,9 @@ class MenuBar extends PureComponent {
         {context => {
           return (
             <div
-              id={`${context.state.showNav || !atHome ? 'show-nav' : 'hide-nav'}`}
+              id={`${
+                context.state.showNav || !atHome ? 'show-nav' : 'hide-nav'
+              }`}
             >
               <nav className="navbar">
                 <Brand
@@ -47,8 +49,7 @@ class MenuBar extends PureComponent {
               )}
             </div>
           );
-        }
-        }
+        }}
       </Context.Consumer>
     );
   }

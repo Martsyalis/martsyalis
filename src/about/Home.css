@@ -36,24 +36,22 @@
 .home-job {
   font-size: 2rem;
 }
-.arrow{
+.arrow {
   font-size: 1.5rem;
 }
-.arrow:hover{
+.arrow:hover {
   cursor: pointer;
 }
 
-.arrow:hover .down-arrow{
+.arrow:hover .down-arrow {
   transform: rotate(0.25turn);
   transition-duration: 0.3s;
-
 }
 
 .transition {
   transition: all 600ms ease-in-out;
   transform: translateY(-130vh);
 }
-
 
 @keyframes fadein {
   0% {
@@ -67,14 +65,12 @@
   }
 }
 
-
-
 @keyframes page-up {
   from {
     margin-top: -10vh;
   }
   to {
-    margin-top:-200vh;
+    margin-top: -200vh;
   }
 }
 
