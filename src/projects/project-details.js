@@ -1,9 +1,10 @@
 import JDREImg from '../assets/JDRE.png';
+import JDREAdminImg from '../assets/JDRE2.png';
 import spaceExpImg from '../assets/space-explorers.jpeg';
-import fightsImg from '../assets/fights.png';
 import travelImg from '../assets/travel2.png';
 import weatherImg from '../assets/weather1.png';
 import portfolioImg from '../assets/tower.jpg';
+import miniGameImg from '../assets/miniGame.png';
 
 export const projects = [
   {
@@ -20,7 +21,7 @@ export const projects = [
   },
   {
     title: 'Travel Share',
-    tech: 'React, Redux, Node, AWS, Sockets.io, Cloud Services',
+    tech: 'React, Redux, Node, Mobile, AWS, Sockets.io, Cloud Services',
     url: 'https://travelshareapp.herokuapp.com',
     img: travelImg
   },
@@ -31,15 +32,15 @@ export const projects = [
     img: spaceExpImg
   },
   {
-    title: 'Parking Fights',
-    tech: 'React, Redux',
-    url: 'https://parking-fights.herokuapp.com',
-    img: fightsImg
+    title: 'JDRE Admin Website',
+    tech: 'React, Redux, PWA, Node, Cloud Services',
+    url: 'https://jdre-admin.herokuapp.com',
+    img: JDREAdminImg
   },
   {
-    title: 'Weather PWA',
-    tech: 'Vanilla JS, PWA, Shelling',
-    url: 'https://pwatesttest.herokuapp.com',
-    img: weatherImg
+    title: 'Mini Game App',
+    tech: 'Vanilla JS, Phaser 3',
+    url: 'https://mini-game-app.netlify.com/',
+    img: miniGameImg
   }
 ];
