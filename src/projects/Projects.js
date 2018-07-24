@@ -17,7 +17,7 @@ export default class Projects extends PureComponent {
       let newTitles = '';
       let removedTitles = '';
 
-      projects.map(project => {
+      projects.forEach(project => {
         if (
           !project.tech.includes(prevState.selection) &&
           project.tech.includes(this.state.selection)
