@@ -16,7 +16,7 @@ export const projects = [
   {
     title: 'Jimmy Dorsey Real Estate',
     tech: 'Node, React, Redux, Firebase, Mobile, FCM, Cloud Services',
-    url: 'https://jdre-app.herokuapp.com',
+    url: 'https://www.jimmydorseyrealestate.com',
     img: JDREImg
   },
   {
