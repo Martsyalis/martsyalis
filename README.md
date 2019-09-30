@@ -1,6 +1,6 @@
 # martsyalis.github.io
 
-My portfolio. Made using Webpack, AWS and React. 
+My old portfolio. Made using Webpack, AWS and React. Uses a fun arhitecture that mounts pages on a carousel. The though was that by keeping pages out of view instead of unmounting them, subsequent visits to the pages would be faster. In reality it made website much harder to change and update, while offering minimal, if any, benefit to performance. it was still fun building it though!
 
 
 ## TODO:
